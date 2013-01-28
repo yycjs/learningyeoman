@@ -1,0 +1,81 @@
+!!! 5
+//if lt IE 7
+	html.no-js.lt-ie9.lt-ie8.lt-ie7
+//if IE 7
+	html.no-js.lt-ie9.lt-ie8
+//if lte IE 7
+	script(src = "js/lte-ie7.js")
+//if IE 8
+	script(src = "js/lte-ie7.js")
+	html.no-js.lt-ie9
+//if lte IE 8
+	html.no-js.lt-ie9.lt-ie8.lt-ie7
+//if gt IE 8
+	html.no-js
+head
+	title = title
+	description = description
+	block head
+		block header-meta
+			meta(charset = "utf-8")
+			meta(http-equiv = "X-UA-Compatible", content = "IE=edge,chrome=1")
+			title #{title}
+			meta(name = "description", content = "#{description}")
+			meta(name = "viewport", content = "width=device
+		block header-scripts
+			script(src = "js/modernizr.custom.min.js")
+		block header-styles
+			link(href = "http://fonts.googleapis.com/css?family=Open+Sans:400,300", rel = "stylesheet")
+			link(rel = "stylesheet", href = "/css/style.css")
+body
+	#ajaxloader1
+	header.row.centred
+		nav(role = "main")
+			ul.nav
+				li
+					a(href = "#")
+						| &nbsp;Home&nbsp;
+						i.icon-home
+				li
+					a(href = "#")
+						| &nbsp;About&nbsp;
+						i.icon-book-2
+				li
+					a(href = "#")
+						| &nbsp;Download&nbsp;
+						i.icon-download
+				li
+					a(href = "#")
+						| &nbsp;FAQ&nbsp;
+						i.icon-database
+				li
+					a(href = "#")
+						| &nbsp;Contact&nbsp;
+						i.icon-mail
+	#content.container.visuallyhidden.loading
+		block content
+	block footer
+		footer.row.centred
+			nav(role = "secondary")
+				ul
+					li
+						a(href = "#") Link 1
+					li
+						a(href = "#") Link 2
+					li
+						a(href = "#") Link 3
+					li
+						a(href = "#") Link 4
+	block scripts
+		script(src = "//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js")
+		script
+			window.jQuery || document.write("<script src = "js/jquery-1.9.0.min.js"><\\/script>")
+		script(src = "/js/loader.js")
+		script(src = "/js/main.js")
+		//script(src = "/js/live-ck.js")
+		//Google Analytics: change UA-XXXXX-X to be your site"s ID.
+		script
+			var _gaq=[["_setAccount","UA-XXXXX-X"],["_trackPageview"]];
+			(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+				g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
+				s.parentNode.insertBefore(g,s)}(document,"script"));
