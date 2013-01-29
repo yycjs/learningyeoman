@@ -142,8 +142,26 @@ a {
 }
 
 /* Put anything that needs margin here */
-.box, .alert, .pagination ul, .dataTables_paginate {
+.box, .alert, .pagination ul, .dataTables_paginate, .start-show {
 	margin: @margin;
+}
+
+button.btn.btn-primary.start-show {
+	.border-radius(50%);
+	font-size: @fontSizeLarge * @multiplier;
+	padding: @paddingLarge @padding;
+	font-weight: @headingsFontWeight;
+	background: fade(@borderColour, 20%);
+	.box-shadow(0 0 (@marginLarge * @multiplierLarge) fade(@textColour, 30%));
+	&:hover {
+		border-color: darken(@borderColour, 30%);
+		color: lighten(@textColour, 30%);
+		.box-shadow(0 0 @marginLarge fade(@textColour, 40%));
+	}
+}
+/*Anything that needs indented spacing*/
+blockquote, .container ul li, ol li {
+	margin-left: @marginLarge;
 }
 
 /* Put anything that needs padding here */
@@ -153,7 +171,7 @@ a {
 	padding: @padding;
 }
 
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, p, h1, h2, h3, h4, h5, h6, blockquote, pre, address, cite, code, del, dfn, img, q, dl, ul, fieldset, form, legend, table, caption, summary, audio, video, input, select, textarea {
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, p, h1, h2, h3, h4, h5, h6, blockquote, pre, address, cite, code, del, dfn, img, q, dl, ul, fieldset, form, legend, table, caption, summary, audio, video, input, select, textarea, ol, .container ul {
 	margin-bottom: @margin; //spaced only at bottom by default
 }
 
@@ -173,6 +191,10 @@ nav, nav, nav li, .toolbar, .toolbar input, .toolbar li, .toolbar li input, .btn
 	.inline-block;
 }
 
+/* anything we want to transition */
+.transitioned, .transition-all {
+	.transition-all(@transition-time);
+}
 /* centred stuff in block layout */
 
 .actions, .form-actions, .toolbar, .btn-group, .actions input, footer {
@@ -194,4 +216,11 @@ Borders
 	border-bottom: @borderStyle @borderColour;
 }
 
+.borderless {
+	border: none;
+}
+
+.slide {
+	width: 40em;
+}
 @import "imports/media-queries.less";

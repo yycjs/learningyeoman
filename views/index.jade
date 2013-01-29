@@ -1,26 +1,17 @@
 extends layout
 
 block content
-	.row
-		.threecol
-			aside.sidebar-a.box
-				h1 Sidebar A
-				p
-					| This is an&nbsp;
-					code aside
-					| &nbsp;with the class of
-					code sidebar-a
-					| .
-		.sixcol
-			article(role = "main")
-				h1 Hello world!
-				p This is HTML5 Boilerplate.  Some more content here.
-		.threecol.last
-			aside.sidebar-b.box
-				h1 Sidebar B
-				p
-					| This is an&nbsp;
-					code aside
-					| &nbsp;with the class of&nbsp;
-					code sidebar-b
-					| .
+	article#jmpress.visuallyhidden
+		section.slide#slide-1
+			include filler-text
+		section.slide#slide-2(data-x = "3500")
+			include filler-text
+		section.slide#slide-3(data-x = "7500")
+			include filler-text
+	article.teaser.borderless.top-centred
+		div.centred.row.extended-height
+			hgroup
+				h1.title Welcome to this story
+				h4 Press the button to continue
+			button.btn.btn-primary#start.start-show.transitioned Go
+				i.icon-arrow-right

@@ -23,8 +23,16 @@
 /* --- main content ------------------------------------------------------------------------------------------------- */
 
 /* --- media queries ------------------------------------------------------------------------------------------------ */
+@media screen and (max-width: 1920px) {
+	.slide {
+		width: 1600px;
+	}
+}
 
 @media screen and (max-width: 1600px) {
+	.slide {
+		width: 1400px;
+	}
 }
 
 @media screen and (max-width: 1400px) {
@@ -32,30 +40,24 @@
 		white-space: normal;
 		//.btn-group-vertical;
 	}
-
+	.slide {
+		width: 1000px;
+	}
 	.btn {
 		padding: 2.6% 5%;
-	}
-
-	.sidebar {
-		.btn-group {
-			.btn {
-				.border-radius(0)
-			}
-			&:first-child {
-				.border-radius-top(@borderRadius);
-			}
-			&:last-child {
-				.border-radius-bottom(@borderRadius);
-			}
-		}
 	}
 }
 
 @media screen and (max-width: 1200px) {
+	.slide {
+		width: 800px;
+	}
 }
 
 @media screen and (max-width: 1024px) {
+	.slide {
+		width: 624px;
+	}
 }
 
 @media screen and (max-width: 1000px) {
@@ -80,6 +82,9 @@
 }
 
 @media screen and (max-width: 600px) {
+	.slide {
+		width: 400px;
+	}
 }
 
 @media screen and (max-width: 480px) {
@@ -89,6 +94,9 @@
 }
 
 @media screen and (max-width: 320px) {
+	.slide {
+		width: 275px;
+	}
 }
 
 /* --- iPad --------------------------------------------------------------------------------------------------------- */

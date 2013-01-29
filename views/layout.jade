@@ -6,7 +6,6 @@
 //if lte IE 7
 	script(src = "js/lte-ie7.js")
 //if IE 8
-	script(src = "js/lte-ie7.js")
 	html.no-js.lt-ie9
 //if lte IE 8
 	html.no-js.lt-ie9.lt-ie8.lt-ie7
@@ -29,47 +28,18 @@ head
 			link(rel = "stylesheet", href = "/css/style.css")
 body
 	#ajaxloader1
-	header.row.centred
-		nav(role = "main")
-			ul.nav
-				li
-					a(href = "#")
-						| &nbsp;Home&nbsp;
-						i.icon-home
-				li
-					a(href = "#")
-						| &nbsp;About&nbsp;
-						i.icon-book-2
-				li
-					a(href = "#")
-						| &nbsp;Download&nbsp;
-						i.icon-download
-				li
-					a(href = "#")
-						| &nbsp;FAQ&nbsp;
-						i.icon-database
-				li
-					a(href = "#")
-						| &nbsp;Contact&nbsp;
-						i.icon-mail
+	block header
+		header.row.centred
 	#content.container.visuallyhidden.loading
 		block content
 	block footer
-		footer.row.centred
-			nav(role = "secondary")
-				ul
-					li
-						a(href = "#") Link 1
-					li
-						a(href = "#") Link 2
-					li
-						a(href = "#") Link 3
-					li
-						a(href = "#") Link 4
+		footer.row.centred.visuallyhidden
 	block scripts
 		script(src = "//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js")
 		script
 			window.jQuery || document.write("<script src = "js/jquery-1.9.0.min.js"><\\/script>")
+		script(src = "/js/jquery.migrate.min.js")
+		script(src = "/js/jmpress.custom.js")
 		script(src = "/js/loader.js")
 		script(src = "/js/main.js")
 		//script(src = "/js/live-ck.js")

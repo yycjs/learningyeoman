@@ -16,6 +16,6 @@
  --------------------------------------------------------------------------------------------------------------------- */
 
 jQuery(document).ready(function($) {
-	$("#ajaxloader1").hide("slow");
+	$("#ajaxloader1").toggle("slow");
 	$(".loading").removeClass("visuallyhidden loading").hide().show("slow");
 });
