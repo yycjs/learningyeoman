@@ -1,17 +1,50 @@
 extends layout
 
 block content
-	article#jmpress.visuallyhidden
-		section.slide#slide-1
+	article#jmpress
+		section.slide#welcome
+			div.teaser.borderless.top-centred
+				div.centred.row.extended-height
+					hgroup
+						h1.title Welcome to this story
+						h4 Press the button to continue
+					button.btn.btn-primary.tech#start.start-show.transitioned Go
+						i.icon-arrow-right
+		section.slide#intro(data-y = "-4500", data-x = "3500", data-z = "5000", data-duration = "11000")
+			include intro
+		section.slide#the-war(data-x = "7000", data-duration = "12000", data-rotate = "90", data-z = "1000")
+			hgroup.centred
+				h1.title(data-jmpress = "fade after 1s step")
+					| The war begin in 2135.
+					em(data-jmpress = "fade after 1s prev").type ...
+					span(data-jmpress = "fade after 1s prev") Lighting spheres lit the skies, which were operated by ionized transistors.
+				h2(data-jmpress = "fade after 2s prev")
+					| Half the people’s population was heavily dispersed amongst other planets, Mars being one of them, which was colonized in 2094
+		section.slide#civilization(data-x = "7500",data-duration = "8000")
+			h1.centred(data-jmpress = "fade after 1s step") At this point, civilization
+				em.huge(data-jmpress = "fade after 1.5s prev") thrived.
+			p.huge.centred.tech(data-jmpress = "fade-slow after 2s em") Human life had been extended by over 230 years, and what we call ourselves could just maybe be called people.
+		section.slide#human(data-x = "7500", data-duration = "6000", data-rotate = "45", data-z = "-1200")
+			h1.title.centred(data-jmpress = "fade after 1s step")
+				| But we were still
+				em.tech-huge.huge(data-jmpress = "fade after 1.5s prev") &nbsp;human&nbsp;.
+		section.slide#slide-4(data-x = "12500", data-duration = "10000")
+			h1.centred(data-jmpress = "fade after 1s step") My story begins where yours ends.
+			p.huge.centred(data-jmpress = "fade-slow after 2s prev") You see, us so-called “humans” have been around for millennia.  What used to be taught in what I was told was called school was that we have been around no more than 4 million years.  Before that came micro-species, other micro-organisms, which were later documented by mankind.
+		section.slide#lies(data-x = "12500", data-duration = "6000", data-z = "-5000")
+			h1.title.centred(data-jmpress = "fade after 1s step") It was all
+				em.huge.scary(data-jmpress = "fade-slow after 1.2s h1") lies .
+		section.slide#choose-a-character(data-z = "-5000")
+			include choose
+		section.slide#coronni(data-x = "18000", data-rotate = "360")
+			include coronni-story
+		section.slide#sibereo(data-x = "18000", data-z = "4000", data-rotate = "60")
 			include filler-text
-		section.slide#slide-2(data-x = "3500")
+		section.slide#optunna(data-x = "18000", data-z = "8000", data-rotate = "120")
 			include filler-text
-		section.slide#slide-3(data-x = "7500")
+		section.slide#hiddiu(data-x = "18000", data-z = "12000", data-rotate = "180")
 			include filler-text
-	article.teaser.borderless.top-centred
-		div.centred.row.extended-height
-			hgroup
-				h1.title Welcome to this story
-				h4 Press the button to continue
-			button.btn.btn-primary#start.start-show.transitioned Go
-				i.icon-arrow-right
+		section.slide#mina(data-x = "18000", data-z = "16000", data-rotate = "240")
+			include filler-text
+		section.slide#clide(data-x = "18000", data-z = "20000", data-rotate = "300")
+			include filler-text

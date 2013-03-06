@@ -638,3 +638,56 @@ Site-wide rules
 .extended-height {
 	overflow: visible !important;
 }
+
+/*.keyframes (@name, @frames) {
+	~"@-webkit-keyframes @{name}" {@frames}
+	~"@-moz-keyframes @{name}" {@frames}
+	~"@-ms-keyframes @{name}" {@frames}
+	~"@-o-keyframes @{name}" {@frames}
+	~"@keyframes @{name}" {@frames}
+}*/
+
+.animation-name(@name) {
+	-webkit-animation-name: @name;
+	-moz-animation-name: @name;
+	-o-animation-name: @name;
+	animation-name: @name;
+}
+
+.animation-duration(@duration) {
+	-webkit-animation-duration: @duration;
+	-moz-animation-duration: @duration;
+	-o-animation-duration: @duration;
+	animation-duration: @duration;
+}
+.animation-timing-function(@arguments) {
+	-webkit-animation-timing-function: @arguments;
+	-moz-animation-timing-function: @arguments;
+	-o-animation-timing-function: @arguments;
+	animation-timing-function: @arguments;
+}
+
+.animation-delay(@arguments) {
+	-webkit-animation-delay: @arguments;
+	-moz-animation-delay: @arguments;
+	-o-animation-delay: @arguments;
+	animation-delay: @arguments;
+}
+.animation-iteration-count(@arguments) {
+	-webkit-animation-iteration-count: @arguments;
+	-moz-animation-iteration-count: @arguments;
+	-o-animation-iteration-count: @arguments;
+	animation-iteration-count: @arguments;
+}
+.animation-direction(@arguments) {
+	-webkit-animation-direction: @arguments;
+	-moz-animation-direction: @arguments;
+	-o-animation-direction: @arguments;
+	animation-direction: @arguments;
+}
+.animation-fill-mode(@arguments) {
+	-webkit-animation-fill-mode: @arguments;
+	-moz-animation-fill-mode: @arguments;
+	-o-animation-fill-mode: @arguments;
+	animation-fill-mode: @arguments;
+}

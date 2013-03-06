@@ -24,7 +24,8 @@ head
 		block header-scripts
 			script(src = "js/modernizr.custom.min.js")
 		block header-styles
-			link(href = "http://fonts.googleapis.com/css?family=Open+Sans:400,300", rel = "stylesheet")
+			link(href = "http://fonts.googleapis.com/css?family=Nosifer|Ubuntu+Mono|Poiret+One|Russo+One|Open+Sans:400,300|Electrolize", rel = "stylesheet")
+			//review and refine: http://www.google.com/webfonts#ReviewPlace:refine/Collection:Nosifer|Ubuntu+Mono|Poiret+One|Russo+One|Open+Sans|Electrolize
 			link(rel = "stylesheet", href = "/css/style.css")
 body
 	#ajaxloader1
@@ -35,17 +36,9 @@ body
 	block footer
 		footer.row.centred.visuallyhidden
 	block scripts
-		script(src = "//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js")
-		script
-			window.jQuery || document.write("<script src = "js/jquery-1.9.0.min.js"><\\/script>")
+		script(src = "//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js")
 		script(src = "/js/jquery.migrate.min.js")
 		script(src = "/js/jmpress.custom.js")
+		script(src = "/js/toastr.js")
 		script(src = "/js/loader.js")
 		script(src = "/js/main.js")
-		//script(src = "/js/live-ck.js")
-		//Google Analytics: change UA-XXXXX-X to be your site"s ID.
-		script
-			var _gaq=[["_setAccount","UA-XXXXX-X"],["_trackPageview"]];
-			(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-				g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
-				s.parentNode.insertBefore(g,s)}(document,"script"));

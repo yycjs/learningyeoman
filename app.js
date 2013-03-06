@@ -6,11 +6,9 @@ var express = require("express")
 	, routes = require("./routes")
 	, user = require("./routes/user")
 	, http = require("http")
-	, path = require("path")
-	, livereload = require("express-livereload");
+	, path = require("path");
 
 var app = express();
-livereload(app, config={});
 app.configure(function ()
 {
 	app.set("port", process.env.PORT || 3000);

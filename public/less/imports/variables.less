@@ -14,7 +14,8 @@
 @baseFontFamily: "Open Sans", "sans-serif", "arial";
 @fontSizeSmall: 85%;
 @fontSizeMedium: 90%;
-@fontSizeLarge: 125%;
+@fontSizeLarge: 125% * @multiplierLarge;
+@fontSizeLarger: @fontSizeLarge * @multiplierLarge;
 @fontSizeMini: 75%;
 @baseLineHeight: 1.4;
 @em: 1em;
@@ -65,20 +66,21 @@
 /* =============================================================================
 Colours
 ========================================================================== */
-@textColour: #000;
+@textColour: #FFF;
 @primaryColour: @textColour;
 //colour of text and main colour overall
 @secondaryColour: #DDD;
 @tertiaryColour: #CCC;
 @codeColour: lighten(@textColour, 60%);
 //background colour.  Should be the opposite of primary colour for good results
-@bodyBackgroundImage: url("http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/subtle_dots.png");
+//@bodyBackgroundImage: url("http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/subtle_dots.png");
+@bodyBackgroundImage: url("http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/navy_blue.png");
 @bodyBackgroundColour: spin(@textColour, 180); //inverse of text coliour
 
 /* =============================================================================
 CSS3 PIE settings
 ========================================================================== */
-@pie: true; //enable support for IE6-8 via CSS3 PIE?
+@pie: false; //enable support for IE6-8 via CSS3 PIE?
 @pieDirectory: "PIE.htc";
 
 /* =============================================================================
@@ -87,19 +89,20 @@ shadow
 @shadow: 0 0 @marginLarge @textColour;
 
 /* Transitions */
-@transition-time: 0.5s;
-
+@transition-time: 1s;
+@transition-time-large: @transition-time * @multiplierLarge;
+@transition-time-larger: @transition-time-large * @multiplier;
 /* =============================================================================
 Buttons
 ========================================================================== */
-@buttonPrimaryColour: darken(@primaryColour, 40%);
+@buttonPrimaryColour: fade(@bodyBackgroundColour, 40%);
 @buttonSecondaryColour: lighten(@buttonPrimaryColour, @multiplierLargePercentage);
 
 /* =============================================================================
 Borders
 ========================================================================== */
 @borderStyle: 1px solid;
-@borderColour: lighten(@textColour, 40%);
+@borderColour: rgb(27, 27, 27);
 @border: @borderStyle @borderColour;
 
 // Grays
@@ -122,10 +125,6 @@ Borders
 @orange: #f89406;
 @pink: #c3325f;
 @purple: #7a43b6;
-
-// Scaffolding
-// -------------------------
-@textColour: @black;
 
 // Links
 // -------------------------
@@ -303,5 +302,3 @@ Borders
 @popoverArrowOuterColour: rgba(0, 0, 0, .25);
 
 @horizontalComponentOffset: 15%;
-
-@borderColour: #DDD;
