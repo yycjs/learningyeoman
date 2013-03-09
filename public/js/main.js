@@ -13,8 +13,8 @@ jQuery(document).ready(function ($)
 	{
 		$goButton.on('click', function (e)
 		{
-			e.preventDefault();
 			$slideArea.jmpress("next");
+			return false;
 			//$slideArea.jmpress("select", "#slide-1", "not sure"); --fails too :(
 		});
 		toastr.info("Navigate to the next slide, using the arrow keys on your keyboard", "Hint")
