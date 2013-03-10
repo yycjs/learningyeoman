@@ -35,11 +35,14 @@ jQuery(document).ready(function ($)
 		}).find("a").on('click', function (e)
 			{
 				var $characters = "#coronni, #sibero, #optunna, #huddiu, #mina, #clide";
-				var $slides = $slideArea.find(".step");
-				$characterSlides = $slides.find($characters);
-				var $slidesToRemove = $slides.not("'#" + $(this).attr("href") + "'").toggle(animationSpeed);
-				toastr.info("The slides to remove were:" + $slidesToRemove);
-				console.log($slidesToRemove);
+				$characterSlides = $characterSelect.find($characters);
+				var self = $(this);
+				$characterSlides.on('enterStep', function (e)
+				{
+					var $slidesToRemove = $characterSlides.not(self.attr("href")).toggle(animationSpeed);
+					toastr.info("The slides to remove were:" + $slidesToRemove);
+					console.log($slidesToRemove);
+				});
 			});
 	}
 	function checkSupport () {
