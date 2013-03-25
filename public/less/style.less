@@ -163,6 +163,13 @@ blockquote, .container ul li, ol li {
 .box {
 	.padding-fix;
 	padding: @padding;
+
+	&.character {
+		&:hover {
+			.box-shadow(0 0 3em @textColour);
+			background: fade(@textColour, 40%);
+		}
+	}
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, p, h1, h2, h3, h4, h5, h6, blockquote, pre, address, cite, code, del, dfn, img, q, dl, ul, fieldset, form, legend, table, caption, summary, audio, video, input, select, textarea, ol, .container ul {
