@@ -380,7 +380,7 @@ table{border-collapse:collapse;border-spacing:0;}
 .width33{width:33%;}
 .width50{width:50%;}
 .width100{width:100%;}
-#ajaxloader1,#ajaxloader2,#ajaxloader3,#ajaxloader4{width:30px;height:30px;margin:20px auto;border:8px solid #0a0a0a;border-right-color:transparent;-webkit-border-radius:50%;-khtml-border-radius:50%;-o-border-radius:50%;border-radius:50%;-moz-background-clip:padding;-webkit-background-clip:padding-box;background-clip:padding-box;box-shadow:0 0 25px 2px #eee;-webkit-animation:spin 1s linear infinite;-moz-animation:spin 1s linear infinite;-ms-animation:spin 1s linear infinite;-o-animation:spin 1s linear infinite;animation:spin 1s linear infinite;position:absolute;top:50%;left:50%;}
+#ajaxloader1,#ajaxloader2,#ajaxloader3,#ajaxloader4{width:30px;height:30px;margin:20px auto;border:8px solid rgba(255, 255, 255, 0.99);border-right-color:transparent;-webkit-border-radius:50%;-khtml-border-radius:50%;-o-border-radius:50%;border-radius:50%;-moz-background-clip:padding;-webkit-background-clip:padding-box;background-clip:padding-box;-webkit-box-shadow:0 0 25px 2px #eeeeee;-moz-box-shadow:0 0 25px 2px #eeeeee;-khtml-box-shadow:0 0 25px 2px #eeeeee;-o-box-shadow:0 0 25px 2px #eeeeee;box-shadow:0 0 25px 2px #eeeeee;-webkit-animation:spin 1s linear infinite;-moz-animation:spin 1s linear infinite;-ms-animation:spin 1s linear infinite;-o-animation:spin 1s linear infinite;animation:spin 1s linear infinite;position:absolute;top:50%;left:50%;}
 #ajaxloader1::after{content:'Loading...';font-size:0.8em;font-weight:300;}
 #ajaxloader2{border-right:0 none;}
 #ajaxloader3{border-left-color:transparent;}

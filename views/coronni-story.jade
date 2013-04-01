@@ -1,3 +1,5 @@
+include dialog
+
 section#the-truth.slide
 	hgroup
 		h1.title.centred The truth is not that simple.
@@ -40,8 +42,8 @@ section.slide#ufo(data-x = "20000", data-y = "-800", data-z = "-1200", data-rota
 			h1(data-jmpress = "fade after 2s slide") Karina instructed us to investigate
 			h2(data-jmpress = "fade after 1s prev") I ordered the crew to
 			em(data-jmpress = "fade after 1s prev").type ...
-		- var investiageUFODialog = [{headerText: "Would you like to investiage the UFO?", description: "Choose whether or not to investigate the UFO.", choices: [{name: "Yes"}, {name: "No"}]}
-		+dialog(investiageUFODialog.headerText, investiageUFODialog.description, investiageUFODialog.choices)
+		- var investiageUFODialog = [{headerText: "Would you like to investiage the UFO?", description: "Choose whether or not to investigate the UFO."}, {choices: [{name: "Yes"}, {name: "No"}]}]
+		mixin dialog(investiageUFODialog.headerText, investiageUFODialog.description, investiageUFODialog.choices)
 	section.slide#ship-crash(data-x = "28000", data-y = "-1600", data-z = "-1200", data-rotate = "0")
 		hgroup
 			h1(data-jmpress = "fade after 2s slide") Upon bringing the object into our vessel, a loud, shrillish sound filled the vessel.
