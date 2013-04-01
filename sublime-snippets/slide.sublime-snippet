@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+section.slide#${1:id}(data-x = "${2:12000}", data-y = "${3:0}", data-z = "${4:0}", data-rotate = "${5:0}")
+	h1.centred(data-jmpress = "${6:fade after 2s slide}") ${7:Header text}
+	p.huge.centred(data-jmpress = "${8:fade after 1s prev}") ${9:put content text here}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+<tabTrigger>slide</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+<scope>source.jade</scope>
+</snippet>

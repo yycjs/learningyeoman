@@ -1,0 +1,12 @@
+mixin dialog(title, description, choices)
+		form.choices.dialog.row
+			legend
+				h1 #{title}
+				p.description #{description}
+			fieldset
+				for choice in choices
+					label
+						input(type= "radio", name = "choices.name", checked = "checked", required = "required")
+						| choices.name
+			div.row.form-actions
+				button(type="submit", ) Make Choice
