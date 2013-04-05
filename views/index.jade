@@ -16,8 +16,6 @@ block content
 				aside.pull-right
 					small Web by&nbsp;
 						strong Sean Goresht&nbsp;&nbsp;
-					small Artwork by&nbsp;
-						strong Haley Shearing
 		section.slide#intro(data-y = "-4500", data-x = "3500", data-z = "5000", data-duration = "11000")
 			include intro
 		section.slide#the-war(data-x = "7000", data-duration = "12000", data-rotate = "90", data-z = "1000")
@@ -46,10 +44,12 @@ block content
 		section.slide#choose-a-character(data-z = "-5000")
 			include choose
 			section.slide#coronni(data-x = "18000", data-rotate = "360")
-				include coronni-story
+				//include coronni-story
+				p.huge.centred Should have coronni story here
+			include coronni-story
 			section.slide#sibereo(data-x = "18000", data-z = "4000", data-rotate = "60")
 				include filler-text
-			section.slide#optunna(data-x = "18000", data-z = "8000", data-rotate = "120")
+			section.slide#optunna(data-x = "18000", data-z = "8000", data-rotate = "120", data-next = "#opt-intro")
 				include optunna-story
 			section.slide#hiddiu(data-x = "18000", data-z = "12000", data-rotate = "180")
 				include filler-text

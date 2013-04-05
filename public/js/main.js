@@ -15,7 +15,6 @@ jQuery(document).ready(function ($)
 		{
 			$slideArea.jmpress("next");
 			return false;
-			//$slideArea.jmpress("select", "#slide-1", "not sure"); --fails too :(
 		});
 		toastr.info("Navigate to the next slide, using the arrow keys on your keyboard", "Hint")
 	}
@@ -39,9 +38,9 @@ jQuery(document).ready(function ($)
 				var self = $(this);
 				$characterSlides.on('enterStep', function (e)
 				{
-					var $slidesToRemove = $characterSlides.not(self.attr("href")).toggle(animationSpeed);
+					/*var $slidesToRemove = $characterSlides.not(self.attr("href")).toggle(animationSpeed);
 					toastr.info("The slides to remove were:" + $slidesToRemove);
-					console.log($slidesToRemove);
+					console.log($slidesToRemove);*/
 				});
 			});
 	}
@@ -56,10 +55,26 @@ jQuery(document).ready(function ($)
 			toastr.warning("Your browser does not appear to support CSS3 3d Transforms.  This is not so bad, but you should probably consider upgrading to a browser that has this (Chrome, Firefox, Opera.", "Warning");
 		}
 	}
+	function makeChoices() {
+		var $formButton = $slideArea.find(".choices button[type='submit']"),
+			$radios = $slideArea.find("input[type='radio']").on('click', function (e)
+			{
+				if ($(this).attr("data-destination") != "undefined") {
+					$formButton.attr("data-destination", $(this).attr("data-destination"));
+				}
+			});
+		$formButton.on('click', function (e)
+		{
+			$slideArea.jmpress("goTo", $(this).attr("data-destination"));
+			return false;
+		});
+
+	}
 	function main() {
 		checkSupport();
 		startButton();
 		characterSelect();
+		makeChoices();
 	}
 });
 

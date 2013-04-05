@@ -1,12 +1,14 @@
-mixin dialog(title, description, choices)
+mixin dialog(title, description, choices, destination)
 	form.choices.dialog.row
-		legend
-			h1 title
-			p.description description
-		fieldset
+		legend.centred
+			h1 #{title}
+			p.description #{description}
+		fieldset.centred
 			for choice in choices
-				label
-					input(type= "radio", name = "choice.name", checked = "checked", required = "required")
-					| choice.name
+				label(for = choice.name)
+					input(type= "radio", id = choice.name, value = choice.name, name = title,
+					data-destination = choice.destination)
+					| #{choice.name}
 		div.row.form-actions
-			button(type="submit", ) Make Choice
+			button.transition-all(type="submit") Make Choice &nbsp;
+				i.icon-checkmark
