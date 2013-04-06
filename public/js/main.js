@@ -82,7 +82,7 @@ jQuery(document).ready(function ($)
 	function setColours() {
 		var $colouredSlides = $slideArea.find(".slide[data-colour]").on("enterStep", function (e)
 		{
-			$body.addClass($(this).attr("data-colour"));
+			$body.removeClass().addClass($(this).attr("data-colour"));
 		});
 		
 	}

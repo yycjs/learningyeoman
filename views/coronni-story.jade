@@ -2,37 +2,47 @@ include dialog
 div.character-coronni
 	section.slide#the-ship(data-x = "20000", data-y = "-400", data-z = "600", data-rotate = "90")
 		h1.centred.type Our ship glided through the galaxy...
-		p.huge.centred(data-jmpress = "fade after 1s prev") We were searching for remanents
+		p.huge.centred.type(data-jmpress = "fade after 4s step") We were searching for remanents
 			em(data-jmpress = "fade after 1s prev").type ...
-		p.huge(data-jmpress = "fade after 1s prev") outside of our exoplanets.  For things that may have been harmful to our civilizations
+		p.huge.type(data-jmpress = "fade after 2s prev") outside of our exoplanets.  For things that may have been harmful to our civilizations
 
 	section.slide#ufo(data-x = "20000", data-y = "-800", data-z = "-1200", data-rotate = "90")
-		h1.centred(data-jmpress = "fade after 2s slide") But as we sat propelled in midair on our ship, I noticed something strange
+		h1.centred(data-jmpress = "fade after 2s step") But as we sat propelled in midair on our ship, I noticed something strange
 		p.huge.centred(data-jmpress = "fade after 1s prev") The object was different.
-		em(data-jmpress = "fade after 1s prev").type ...
-		p.centred(data-jmpress = "fade after 1s prev") It appeared to be similar to a vision metering system, a device we used to see around corners
+		em.huge.centred(data-jmpress = "fade after 1s prev").type ...
+		p.huge..centred(data-jmpress = "fade after 1s prev") It appeared to be similar to a vision metering system, a device we used to see around corners
 
 	section.slide#investigate-ufo(data-x = "24000", data-y = "-800")
-		hgroup.centred(data-jmpress = "fade after 1s slide")
+		hgroup.centred(data-jmpress = "fade after 1s step")
 			h1.type Karina instructed us to investigate
-			h2(data-jmpress = "fade after 1s prev") I ordered the crew to
-			em(data-jmpress = "fade after 1s prev").type ...
+			h2(data-jmpress = "fade after 2s prev") I ordered the crew to
+			em(data-jmpress = "fade after 1s prev", data-type-delay = "1000").type ...
 		- var investiageUFODialog = {headerText: "Would you like to investiage the UFO?", description: "Choose whether or not to investigate the UFO.", choices: [{name: "Yes", destination: "#show-ufo"}, {name: "No", destination: "#ship-crash"}]}
 		mixin dialog(investiageUFODialog.headerText, investiageUFODialog.description, investiageUFODialog.choices)
 	section.slide#ship-crash(data-x = "28000", data-y = "-1600", data-z = "-1200", data-rotate = "30")
 		hgroup
 			h1.type(data-type-delay = "50") Upon bringing the object into our vessel, a loud, shrillish sound filled the vessel.
 			h2.type The object's tubes dissipated into a crysalized polygon
-		p.huge(data-jmpress = "fade after 1s h2") This was the last thing I can remember
-		p.pull-right(data-jmpress = "fade after 1s p") then everything went
-			em.type(data-type-delay = "400") ...
+		p.huge(data-jmpress = "fade after 8s step") This was the last thing I can remember
+		p.huge.pull-right.type(data-jmpress = "fade after 4s prev") then everything went
+		p.centred.larger.type(data-type-delay = "1000") ......
 	section.slide#black.full.black(data-x = "28000", data-y = "-1600", data-z = "-2600", data-colour = "black")
 		h1.centred.top-centred.scary.bloody.larger(data-jmpress = "fade after 1s step") black
-	section.slide.black.full(data-template = "mytemplate", data-duration = "9000", data-colour = "black")#crashing
+	section.slide.black.full(data-x = "3500", data-duration = "9000", data-colour = "black")#crashing
 		h1.centred.type.larger(data-type-delay = "1500") ......
 		p.tech.huge(data-jmpress = "fade after 5s h1") System Failed &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			em(data-jmpress = "fade after 3s prev") Rebooting
-	section.slide.full(data-template = "mytemplate", data-colour = "twilight")#awake
+	section.slide.full(data-x = "5000", data-colour = "twilight")#awake
 		h1.centred.larger ......
 		p.huge.typed(data-jmpress = "fade after 1s step") I awoke to a blueish light.
 		p.huge.typed(data-jmpress = "fade after 1s prev") My ship had crashed
+	section.slide(data-template = "mytemplate")#pain
+		h1.centred.type I got up slowly, noticing a strange feeling in my artificial knees
+		p.centred.type(data-type-delay = "1000", data-jmpress = "fade after 1s step") ....
+		h2.centred(data-jmpress = "fade after 5s prev") Pain
+	section.slide(data-template = "mytemplate")#pain
+		h1.centred.type Attempting to connect to Karina, I noticed something was off
+		p.centred.type(data-type-delay = "1000", data-jmpress = "fade after 1s step") ....
+		h2.centred(data-jmpress = "fade after 5s prev") No more whispering... no more...
+	section.slide(data-template = "mytemplate")#no-karina
+		h1.centred.larger(data-jmpress = "fade after 1s step") Nothing
