@@ -1,56 +1,38 @@
 include dialog
+div.character-coronni
+	section.slide#the-ship(data-x = "20000", data-y = "-400", data-z = "600", data-rotate = "90")
+		h1.centred.type Our ship glided through the galaxy...
+		p.huge.centred(data-jmpress = "fade after 1s prev") We were searching for remanents
+			em(data-jmpress = "fade after 1s prev").type ...
+		p.huge(data-jmpress = "fade after 1s prev") outside of our exoplanets.  For things that may have been harmful to our civilizations
 
-section#the-truth.slide(data-x = "2000")
-	hgroup
-		h1.title.centred The truth is not that simple.
-		h2 It’s likely that this process which has been governing our multiverse in all observable dimensions has repeated itself multiple times since The Conflict.
-
-section#sophisticated.slide(data-x = "4000")
-	p.huge.centred(data-jmpress = "fade after 1s slide") Even before the first age of mankind, humans existed;
-		span(data-jmpress = "fade after 2s prev") in fact
-		| they existed in a more sophisticated form…
-		span.larger.tech(data-jmpress = "fade after 1s prev") even more sophisticated than us.
-section.slide#sill-fight(data-x = "8000")
-	hgroup
-		h1.centred(data-jmpress = "fade after 2s slide") But what’s most fascinating is that humans still fought.
-		h2(data-jmpress = "fade after 1s prev") They still fought over
-		h3.tech-fat.larger(data-jmpress = "fade after 1s prev") land
-		h3.tech.large(data-jmpress = "fade after 1s prev") matter
-	p.huge.pull-right(data-jmpress = "fade after 2s prev")
-		| items they thought valuable
-
-section#dyshtas-1.slide(data-x = "12000")
-	h1.centred(data-jmpress = "fade after 2s slide") The genus I speak about is now known as the Dyshtas
-	p.huge.centred(data-jmpress = "fade after 1s prev") Only recently, our collective discovered remnants of their
-	| kind. Some of our greatest minds have attempted to solve the puzzles of their ancestry, but this has led to no conclusive evidence.  What has been discovered, however, is that the species, like us in our earlier forms, competed against its own kind.  Recent studies have posited that they fought each other with such contempt that they brought Armageddon on themselves, in all worlds in which they lived.
-
-section.slide#dyshtas-2(data-x = "15000", data-y = "900", data-z = "-400", data-rotate = "40")
-	h1.centred(data-jmpress = "fade after 2s slide") The genus I speak about is now known as the Dyshtas
-	p.huge.centred(data-jmpress = "fade after 1s prev") put content text here
-
-section.slide#the-ship(data-x = "20000", data-y = "-400", data-z = "600", data-rotate = "90")
-	h1.centred(data-jmpress = "fade after 2s slide") Our ship glided through the galaxy...
-	p.huge.centred(data-jmpress = "fade after 1s prev") We were searching for remanents
+	section.slide#ufo(data-x = "20000", data-y = "-800", data-z = "-1200", data-rotate = "90")
+		h1.centred(data-jmpress = "fade after 2s slide") But as we sat propelled in midair on our ship, I noticed something strange
+		p.huge.centred(data-jmpress = "fade after 1s prev") The object was different.
 		em(data-jmpress = "fade after 1s prev").type ...
-	p.huge(data-jmpress = "fade after 1s prev") outside of our exoplanets.  For things that may have been harmful to our civilizations
+		p.centred(data-jmpress = "fade after 1s prev") It appeared to be similar to a vision metering system, a device we used to see around corners
 
-section.slide#ufo(data-x = "20000", data-y = "-800", data-z = "-1200", data-rotate = "90")
-	h1.centred(data-jmpress = "fade after 2s slide") But as we sat propelled in midair on our ship, I noticed something strange
-	p.huge.centred(data-jmpress = "fade after 1s prev") The object was different.
-	em(data-jmpress = "fade after 1s prev").type ...
-	p.centred(data-jmpress = "fade after 1s prev") It appeared to be similar to a vision metering system, a device we used to see around corners
-
-section.slide#investigate-ufo(data-y = "-800", data-exclude = "true")
-		hgroup.centred
-			h1(data-jmpress = "fade after 2s slide") Karina instructed us to investigate
+	section.slide#investigate-ufo(data-x = "24000", data-y = "-800")
+		hgroup.centred(data-jmpress = "fade after 1s slide")
+			h1.type Karina instructed us to investigate
 			h2(data-jmpress = "fade after 1s prev") I ordered the crew to
 			em(data-jmpress = "fade after 1s prev").type ...
 		- var investiageUFODialog = {headerText: "Would you like to investiage the UFO?", description: "Choose whether or not to investigate the UFO.", choices: [{name: "Yes", destination: "#show-ufo"}, {name: "No", destination: "#ship-crash"}]}
 		mixin dialog(investiageUFODialog.headerText, investiageUFODialog.description, investiageUFODialog.choices)
-section.slide#ship-crash(data-x = "28000", data-y = "-1600", data-z = "-1200", data-rotate = "0")
+	section.slide#ship-crash(data-x = "28000", data-y = "-1600", data-z = "-1200", data-rotate = "30")
 		hgroup
-			h1(data-jmpress = "fade after 2s slide") Upon bringing the object into our vessel, a loud, shrillish sound filled the vessel.
-			h2(data-jmpress = "fade after 1s prev") The object's tubes dissipated into a crysalized polygon
-		p.huge(data-jmpress = "fade after 1s prev") This was the last thing I can remember
-		p.pull-right(data-jmpress = "fade after 1s prev") then everything went
-			em(data-jmpress = "fade after 1s prev").scary.huge black
+			h1.type(data-type-delay = "50") Upon bringing the object into our vessel, a loud, shrillish sound filled the vessel.
+			h2.type The object's tubes dissipated into a crysalized polygon
+		p.huge(data-jmpress = "fade after 1s h2") This was the last thing I can remember
+		p.pull-right(data-jmpress = "fade after 1s p") then everything went
+			em.type(data-type-delay = "400") ...
+	section.slide#black.full.black(data-x = "28000", data-y = "-1600", data-z = "-2600", data-colour = "black")
+		h1.centred.top-centred.scary.bloody.larger(data-jmpress = "fade after 1s step") black
+	section.slide.black.full(data-template = "mytemplate", data-duration = "9000", data-colour = "black")#crashing
+		h1.centred.type.larger(data-type-delay = "1500") ......
+		p.tech.huge(data-jmpress = "fade after 5s h1") System Failed &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			em(data-jmpress = "fade after 3s prev") Rebooting
+	section.slide.full(data-template = "mytemplate", data-colour = "twilight")#awake
+		h1.centred.larger ......
+		p.huge.typed(data-jmpress = "fade after 1s step") I awoke to a blueish light.
+		p.huge.typed(data-jmpress = "fade after 1s prev") My ship had crashed

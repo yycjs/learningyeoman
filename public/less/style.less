@@ -28,6 +28,7 @@
 
 body {
 	font-family: @sansFontFamily;
+	.transition(background @transitionTime linear);
 	max-width: 1140px;
 	margin: 0 auto;
 	color: @textColour;
@@ -210,9 +211,20 @@ blockquote, .container ul li, ol li {
 	padding: @padding;
 
 	&.character {
+		/*.character-name:nth-child(1) {
+				font-size: 130%;
+				font-weight: bold;
+				.tech;
+				letter-spacing: -0.1em;
+		}*/
+		background: rgba(68, 68, 68, 0.42);
+		.box-shadow(inset 0 0 7em -4em rgba(0, 0, 0, 0.4), 0 2em 4em -3em rgba(0, 0, 0, 0.82));
+		h1 {
+			.tech;
+		}
 		&:hover {
-			.box-shadow(0 0 3em @textColour);
-			background: fade(@textColour, 40%);
+			.box-shadow(0 0 5em rgba(0, 0, 0, 0.56));
+			background: rgba(29, 29, 29, 0.61);
 		}
 	}
 }
@@ -238,7 +250,7 @@ nav, nav, nav li, .toolbar, .toolbar input, .toolbar li, .toolbar li input, .btn
 }
 
 /* anything we want to transition */
-.transitioned, .transition-all {
+.transitioned, .transition-all, .box {
 	.transition-all(@transition-time);
 }
 /* centred stuff in block layout */
@@ -278,7 +290,18 @@ Borders
 			.opacity(30);
 		}
 	}
+	&.full {
+		width: 100%;
+		height: 100%;
+		border: 0;
+	}
 }
 
-
+.black {
+	background: #000000;
+}
+.twilight {
+	background: #00415a;
+	.box-shadow(inset 0 0 41em rgb(255, 255, 255));
+}
 @import "imports/media-queries.less";

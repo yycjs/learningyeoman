@@ -5,6 +5,8 @@ jQuery(document).ready(function ($)
 	var $contentArea = $("#content");
 	var $loader = $("#ajaxloader1");
 	var $goButton = $("#start");
+	var $typedSelector = $(".type");
+	var $body = $("body");
 	$slideArea.jmpress({
 		stepSelector: "section",
 		afterInit: main()
@@ -70,24 +72,39 @@ jQuery(document).ready(function ($)
 		});
 
 	}
+	function makeTyped() {
+		//$($typedSelector).typewrite();
+		$slideArea.find(".slide").on('enterStep', function (e)
+		{
+			$(this).find($typedSelector).typewrite();
+		});
+	}
+	function setColours() {
+		var $colouredSlides = $slideArea.find(".slide[data-colour]").on("enterStep", function (e)
+		{
+			$body.addClass($(this).attr("data-colour"));
+		});
+		
+	}
+	function setTemplates() {
+		$.jmpress("template", "mytemplate", {
+			children: function( idx, current_child, children ) {
+				return {
+					y: 400
+					,x: -700 + idx * 700
+					,template: "mytemplate"
+					,scale: 0.3
+				}
+			}
+		});
+	}
 	function main() {
 		checkSupport();
+		setTemplates();
 		startButton();
 		characterSelect();
 		makeChoices();
+		makeTyped();
+		setColours();
 	}
 });
-
-/* =============================================================================
- Plugin for jmpress goes here
- ========================================================================== */
-/*
-(function( $, document, window, undefined ) {
-	$.jmpress("defaults").story = "test";
-	function test(step, what) {
-		$(step).html(what);
-	}
-	$.jmpress("initStep", function(step, eventData) {
-		test(step, eventData.settings.story);
-	})
-}(jQuery, document, window));*/
