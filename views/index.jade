@@ -1,8 +1,13 @@
 extends layout
 
 block content
+	nav.controls.toolbar
+		button.btn.show-prev(title = "Previous Slide")
+			i.icon-arrow-left
+		button.btn.show-next(title = "Next Slide")
+			i.icon-arrow-right
 	article#jmpress
-		section.slide#welcome
+		section.slide.toggle-controls#welcome
 			div.teaser.borderless.top-centred
 				div.centred.row.extended-height
 					hgroup
@@ -10,7 +15,7 @@ block content
 							em.tech Mindness
 						h2.subtitle.description.type An interactive story
 						h4.type Press the button to continue
-					button.btn.btn-primary.tech#start.start-show.transitioned Go&nbsp;
+					button.btn.btn-primary.tech#start.start-show.show-next.transitioned Go&nbsp;
 						i.icon-arrow-right
 			div.row
 				aside.pull-right
@@ -19,15 +24,14 @@ block content
 							a(href = "http://seangoresht.com", target = "_blank") Sean Goresht&nbsp;&nbsp;
 						a(href = "https://github.com/srsgores/dram205", target = "_blank") Fork this on GitHub&nbsp;
 							i.icon-github-2
-		section.slide#intro(data-y = "-4500", data-x = "3500", data-z = "5000", data-duration = "11000")
+		section.slide.toggle-controls#intro(data-y = "-4500", data-x = "3500", data-z = "5000", data-duration = "11000")
 			include intro
 		section.slide#the-war(data-x = "7000", data-duration = "25000", data-rotate = "90", data-z = "1000")
 			hgroup.centred
 				h1.title(data-jmpress = "fade after 1s step")
 					| The war begin in 2135.
 					em(data-jmpress = "fade after 1s prev") ......
-					span(data-jmpress = "fade after 1s prev") Lighting spheres lit the skies,
-					which were operated by charged superconductors.
+					span(data-jmpress = "fade after 1s prev") Lighting spheres lit the skies, which were operated by charged superconductors.
 				h2.type
 					| Half the people’s population was heavily dispersed amongst other exoplanets, Gilese 581 g being one of them, which was colonized in 2094
 		section.slide#civilization(data-x = "7500",data-duration = "25000")
@@ -68,7 +72,7 @@ block content
 			h1.centred(data-jmpress = "fade after 2s step") But the process of armageddon repeats itself
 			p.huge.centred.type(data-jmpress = "expand after 1s prev") Just as the legends say...
 
-		section.slide#choose-a-character(data-z = "-5000")
+		section.slide.toggle-controls#choose-a-character(data-z = "-5000")
 			include choose
 			include coronni-story
 			section.slide#sibereo(data-x = "18000", data-z = "4000", data-rotate = "60")

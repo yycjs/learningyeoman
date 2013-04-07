@@ -28,7 +28,7 @@ div.character-coronni
 		p.centred.larger.type(data-type-delay = "1000") ......
 	section.slide#black.full.black(data-x = "28000", data-y = "-1600", data-z = "-2600", data-colour = "black")
 		h1.centred.top-centred.scary.bloody.larger(data-jmpress = "fade after 1s step") black
-	section.slide.black.full(data-x = "3500", data-duration = "9000", data-colour = "black")#crashing
+	section.slide.black.full.toggle-controls(data-x = "3500", data-duration = "9000", data-colour = "black")#crashing
 		h1.centred.type.larger(data-type-delay = "1500") ......
 		p.tech.huge(data-jmpress = "fade after 5s h1") System Failed &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			em(data-jmpress = "fade after 3s prev") Rebooting
@@ -36,7 +36,7 @@ div.character-coronni
 		h1.centred.larger ......
 		p.huge.typed(data-jmpress = "fade after 1s step") I awoke to a blueish light.
 		p.huge.typed(data-jmpress = "fade after 1s prev") My ship had crashed
-	section.slide(data-x = "8000", data-z = "-2000", data-colour = "twilight closed")#pain
+	section.slide.toggle-controls(data-x = "8000", data-z = "-2000", data-colour = "twilight closed")#pain
 		h1.centred.type I got up slowly, noticing a strange feeling in my artificial knees
 		p.centred.type(data-type-delay = "1000", data-jmpress = "fade after 1s step") ....
 		h2.centred(data-jmpress = "fade after 5s prev") Pain
@@ -85,5 +85,15 @@ div.character-coronni
 		p.huge.centred(data-jmpress = "fade after 1s prev") They explained to us that we had landed on a distant planet, and that they were only somewhat aware of our existence.
 		p.huge.centred(data-jmpress = "fade after 1s prev") We had run into one of their exoplanetary shields, set to trigger upon contact with oxygen.  The false triggering and contact with oxygen caused our ship to crash.
 	section.slide.step#conversion(data-x = "4000", data-y = "4000", data-z = "4000", data-rotate = "4000")
-		h1.centred(data-jmpress = "fade after 1s step}") Header text goes here
-		p.huge.centred(data-jmpress = "fade after 1s prev") content goes here
+		h1.centred(data-jmpress = "fade after 1s step}") They convinced me to rebel against my home land in Gilese.
+		p.huge.centred(data-jmpress = "fade after 1s prev") They were able to do so, only as Karina was no longer with me
+	section.slide.step#assimilation(data-x = "4000", data-y = "4000", data-z = "4000", data-rotate = "4000")
+		h1.centred(data-jmpress = "fade after 1s step}") They even assimilated me to their culture.
+		p.huge.centred(data-jmpress = "fade after 1s prev") I was happy there.  Until my new planet was invaded.
+	section.slide.step#bringing-fight-back(data-x = "4000", data-y = "4000", data-z = "4000", data-rotate = "4000")
+		h1.centred(data-jmpress = "fade after 1s step}") The prophets on my new land had predicted this, so it came as no shock
+		p.huge.centred(data-jmpress = "fade after 1s prev") Knowing my home land, it was hard, but by this time, they had converted me to hate my own civilization.
+	section.slide.step#kill-home(data-x = "-1200", data-z = "-8000", data-rotate = "45", data-colour = "twilight")
+		h1.centred(data-jmpress = "fade after 1s step") So I decided
+		- var fightHomeLandDialog = {headerText: "Fight back against homeland?", description: "Would you like to help your new exoplanet to fight against an incoming threat?", choices: [{name: "Yes.", destination: "#show-ufo"}, {name: "No", destination: "#ship-crash"}]}
+		mixin dialog(fightHomeLandDialog.headerText, fightHomeLandDialog.description, fightHomeLandDialog.choices)

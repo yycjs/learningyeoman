@@ -4,7 +4,9 @@ jQuery(document).ready(function ($)
 	var $slideArea = $("#jmpress");
 	var $contentArea = $("#content");
 	var $loader = $("#ajaxloader1");
-	var $goButton = $("#start");
+	var $controls = $(".controls");
+	var $showNext = $contentArea.find(".show-next");
+	var $showPrev = $contentArea.find(".show-prev");
 	var $typedSelector = $(".type");
 	var $body = $("body");
 	$slideArea.jmpress({
@@ -13,11 +15,17 @@ jQuery(document).ready(function ($)
 	});
 	function startButton()
 	{
-		$goButton.on('click', function (e)
+		$showNext.on("click", function (e)
 		{
 			$slideArea.jmpress("next");
 			return false;
 		});
+		$showPrev.on("click", function (e)
+		{
+			$slideArea.jmpress("prev");
+			return false;
+		});
+
 		toastr.info("Navigate to the next slide, using the arrow keys on your keyboard", "Hint")
 	}
 	function toggleLoading(selector) {
@@ -46,6 +54,9 @@ jQuery(document).ready(function ($)
 				});
 			});
 	}
+	function toggleControls() {
+		$controls.toggle(animationSpeed);
+	}
 	function checkSupport () {
 		if (Modernizr.csstransforms == false) {
 			toastr.warning("Your browser does not appear to support CSS3 transforms.  Please note that the browser experience will likely suck or really lack stuff.  Maybe time to upgrade your browser (Chrome, Firefox, Opera)?", "Warning");
@@ -73,10 +84,12 @@ jQuery(document).ready(function ($)
 
 	}
 	function makeTyped() {
-		//$($typedSelector).typewrite();
 		$slideArea.find(".slide").on('enterStep', function (e)
 		{
 			$(this).find($typedSelector).typewrite();
+			if ($(this).hasClass("toggle-controls")) {
+				toggleControls();
+			}
 		});
 	}
 	function setColours() {
