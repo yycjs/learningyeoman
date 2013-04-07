@@ -28,7 +28,7 @@
 
 body {
 	font-family: @sansFontFamily;
-	.transition(background @transitionTime linear);
+	.transition(~"background, max-width @{transitionTime} ease-in");
 	max-width: 1140px;
 	margin: 0 auto;
 	color: @textColour;
@@ -303,5 +303,14 @@ Borders
 .twilight {
 	background: #00415a;
 	.box-shadow(inset 0 0 41em rgb(255, 255, 255));
+	&.closed {
+		max-width: 25%;
+	}
+	&.somewhat-open {
+		max-width: 40%;
+	}
+	&.open {
+		max-width: 70%;
+	}
 }
 @import "imports/media-queries.less";

@@ -9,8 +9,8 @@ div.character-coronni
 	section.slide#ufo(data-x = "20000", data-y = "-800", data-z = "-1200", data-rotate = "90")
 		h1.centred(data-jmpress = "fade after 2s step") But as we sat propelled in midair on our ship, I noticed something strange
 		p.huge.centred(data-jmpress = "fade after 1s prev") The object was different.
-		em.huge.centred(data-jmpress = "fade after 1s prev").type ...
-		p.huge..centred(data-jmpress = "fade after 1s prev") It appeared to be similar to a vision metering system, a device we used to see around corners
+			em.huge.centred.type(data-jmpress = "fade after 1s prev") ...
+		p.huge.centred(data-jmpress = "fade after 1s prev") It appeared to be similar to a vision metering system, a device we used to see around corners
 
 	section.slide#investigate-ufo(data-x = "24000", data-y = "-800")
 		hgroup.centred(data-jmpress = "fade after 1s step")
@@ -22,7 +22,7 @@ div.character-coronni
 	section.slide#ship-crash(data-x = "28000", data-y = "-1600", data-z = "-1200", data-rotate = "30")
 		hgroup
 			h1.type(data-type-delay = "50") Upon bringing the object into our vessel, a loud, shrillish sound filled the vessel.
-			h2.type The object's tubes dissipated into a crysalized polygon
+			h2.type The object's tubes dissipated into a crystallized polygon
 		p.huge(data-jmpress = "fade after 8s step") This was the last thing I can remember
 		p.huge.pull-right.type(data-jmpress = "fade after 4s prev") then everything went
 		p.centred.larger.type(data-type-delay = "1000") ......
@@ -32,17 +32,58 @@ div.character-coronni
 		h1.centred.type.larger(data-type-delay = "1500") ......
 		p.tech.huge(data-jmpress = "fade after 5s h1") System Failed &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			em(data-jmpress = "fade after 3s prev") Rebooting
-	section.slide.full(data-x = "5000", data-colour = "twilight")#awake
+	section.slide.full(data-x = "5000", data-colour = "twilight closed")#awake
 		h1.centred.larger ......
 		p.huge.typed(data-jmpress = "fade after 1s step") I awoke to a blueish light.
 		p.huge.typed(data-jmpress = "fade after 1s prev") My ship had crashed
-	section.slide(data-template = "mytemplate")#pain
+	section.slide(data-x = "8000", data-z = "-2000", data-colour = "twilight closed")#pain
 		h1.centred.type I got up slowly, noticing a strange feeling in my artificial knees
 		p.centred.type(data-type-delay = "1000", data-jmpress = "fade after 1s step") ....
 		h2.centred(data-jmpress = "fade after 5s prev") Pain
-	section.slide(data-template = "mytemplate")#pain
+		p.centred(data-jmpress = "fade after 1s prev") ....
+		p.centred(data-jmpress = "fade after 1s prev") Also, the ship was empty.
+	section.slide(data-x = "8000", data-y = "-4000", data-colour = "twilight closed")#pain
 		h1.centred.type Attempting to connect to Karina, I noticed something was off
 		p.centred.type(data-type-delay = "1000", data-jmpress = "fade after 1s step") ....
 		h2.centred(data-jmpress = "fade after 5s prev") No more whispering... no more...
-	section.slide(data-template = "mytemplate")#no-karina
+	section.slide(data-x = "8000", data-z = "-6000", data-colour = "twilight closed")#no-karina
 		h1.centred.larger(data-jmpress = "fade after 1s step") Nothing
+	section.slide(data-x = "9000", data-z = "-8000", data-rotate = "45", data-colour = "twilight")
+		h1.centred.title.type I opened the ship doors, feeling a strange throbbing sensation
+		p.huge.type I immediately saw a land unlike our own, of hydrogen compounds, rocky surfaces.
+		p.huge.type It was as I remembered the Dyshtas' land!
+	section.slide.step#investigate-land(data-x = "-1200", data-z = "-8000", data-rotate = "45", data-colour = "twilight")
+		h1.centred(data-jmpress = "fade after 1s step") But exhausted, I couldn't decide what to do...
+		- var investiageNewPlanet = {headerText: "Would you like to investiage the new exoplanet?", description: "Choose whether or not to investigate the planet on which your ship crash-landed.", choices: [{name: "Yes.", destination: "#show-ufo"}, {name: "No", destination: "#ship-crash"}]}
+		mixin dialog(investiageNewPlanet.headerText, investiageNewPlanet.description, investiageNewPlanet.choices)
+	section.slide.step#investigating-dystha-planet(data-x = "-1200", data-y = "4000", data-z = "-8000", data-rotate = "45", data-colour = "twilight")
+		h1.centred(data-jmpress = "fade after 1s step") I engaged my thrusters, toggling infrared vision
+		p.huge.centred(data-jmpress = "fade after 1s prev") I had a bird's eye view in a matter of seconds
+		p.huge(data-jmpress = "fade after 1s prev") I immediately noticed a cluster of individuals.&nbsp;&nbsp;
+			| Readings indicated that at least one of them was a troop member from the ship.
+	section.slide.step#investigate-troop-member(data-x = "-1500", data-z = "-8000", data-rotate = "45", data-colour = "twilight")
+		h1.centred(data-jmpress = "fade after 1s step") I could then decide whether to find out who this was
+		- var investigatePotentialBodies = {headerText: "Would you like to check to see who the bodies are?", description: "Decide whether or not to approach and investiage an unknown group of bodies", choices: [{name: "Yes.", destination: "#show-ufo"}, {name: "No", destination: "#ship-crash"}]}
+		mixin dialog(investigatePotentialBodies.headerText, investigatePotentialBodies.description, investigatePotentialBodies.choices)
+	section.slide.step#find-troop-member(data-x = "4000", data-y = "4000", data-z = "4000", data-rotate = "4000")
+		h1.centred(data-jmpress = "fade after 1s step}") Upon reaching the bodies, I found a troop member, Bianca, accompanied with two short, unidentifiable creatures
+		p.huge.centred(data-jmpress = "fade after 1s prev") It was strange
+		p.centred.type(data-type-delay = "1000", data-jmpress = "fade after 1s prev")
+		p.huge.centred(data-jmpress = "fade after 1s prev") They were in the process of making strange utterances I could not identify
+	section.slide.step#talking-first(data-x = "4000", data-y = "4000", data-z = "4000", data-rotate = "4000")
+		h1.centred(data-jmpress = "fade after 1s step}") This was the first time I had heard what had been called speech
+		p.huge.centred(data-jmpress = "fade after 1s prev") Ever since The Collective, we had spoken through it.  I only then realized it was impossible for me to communicate unless I adapted somehow
+	section.slide.step#talking-somehow(data-x = "4000", data-y = "4000", data-z = "4000", data-rotate = "4000")
+		h1.centred(data-jmpress = "fade after 1s step}") Yet somehow
+		p.centred.type(data-type-delay = "1000", data-jmpress = "fade after 1s prev") ....
+		p.huge.centred(data-jmpress = "fade after 1s prev") They were talking.
+	section.slide.step#engage-group(data-x = "4000", data-y = "4000", data-z = "4000", data-rotate = "4000")
+		h1.centred(data-jmpress = "fade after 1s step}") I approached the group slowly
+		p.huge.centred(data-jmpress = "fade after 1s prev") The creatures immediately turned their attention to me.  I raised my arms to indicate harmlessness.
+	section.slide.step#exoplanetary-shield(data-x = "4000", data-y = "4000", data-z = "4000", data-rotate = "4000")
+		h1.centred(data-jmpress = "fade after 1s step}") I eventually learned to understand their words
+		p.huge.centred(data-jmpress = "fade after 1s prev") They explained to us that we had landed on a distant planet, and that they were only somewhat aware of our existence.
+		p.huge.centred(data-jmpress = "fade after 1s prev") We had run into one of their exoplanetary shields, set to trigger upon contact with oxygen.  The false triggering and contact with oxygen caused our ship to crash.
+	section.slide.step#conversion(data-x = "4000", data-y = "4000", data-z = "4000", data-rotate = "4000")
+		h1.centred(data-jmpress = "fade after 1s step}") Header text goes here
+		p.huge.centred(data-jmpress = "fade after 1s prev") content goes here
