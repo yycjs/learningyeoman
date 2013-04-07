@@ -41,17 +41,9 @@ jQuery(document).ready(function ($)
 		$characterSelect.on('enterStep', function (e)
 		{
 			toastr.info("Choosing a character will affect the way the story unfolds", "Note");
-		}).find("a").on('click', function (e)
+		}).find(".locked").on('click', function (e)
 			{
-				var $characters = "#coronni, #sibero, #optunna, #huddiu, #mina, #clide";
-				$characterSlides = $characterSelect.find($characters);
-				var self = $(this);
-				$characterSlides.on('enterStep', function (e)
-				{
-					/*var $slidesToRemove = $characterSlides.not(self.attr("href")).toggle(animationSpeed);
-					toastr.info("The slides to remove were:" + $slidesToRemove);
-					console.log($slidesToRemove);*/
-				});
+				toastr.error("This story is not yet written.  Please try again later", "Warning");
 			});
 	}
 	function toggleControls() {
