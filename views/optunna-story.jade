@@ -1,21 +1,62 @@
-p.huge.centred this is test text
-	section.slide#opt-intro(data-x = "4000")
-		div.row
-			hgroup.centred
-				h1 It all began during my training, as I was being assigned my last mission
-				h2 As an assassin for those who committed
-					em.tech Thought Crime
-	section.slide#thought-crime(data-x = "9000")
-		div.row
-			hgroup.centred
-				h1(data-jmpress = "fade after 2s slide") Thought crime
-					em(data-jmpress = "fade after 1s prev").pull-right ...
-				h2(data-jmpress = "fade after 1s prev") Also known as
-					em(data-jmpress = "fade after 1s prev") false reporting
-			p.huge(data-jmpress = "fade after 1s prev") It was the biggest of all treason in our colonies.  Any submitted or uploaded record that went against another witness's account for the event was treated as treason, resulting in a potential death sentence
-	section.slide#brother-clide(data-x = "15000")
-		div.row
-			hgroup.centred
-				h1 At the same time, I had been taking care of my little brother, clide
-				h2 He was everything to me
-			p.huge Though I was well-off in terms of my duty, it was often difficult to juggle teaching him mind management techniques
+section.slide#opt-intro(data-x = "140000", data-scale = "1.4")
+	div.row
+		hgroup.centred
+			h1 It all began during my training, as I was being assigned my last mission
+			h2 As an assassin for those who committed
+				em.tech Thought Crime
+section.slide#thought-crime(data-x = "190000", data-scale = "1.4")
+	div.row
+		hgroup.centred
+			h1(data-jmpress = "fade after 2s slide") Thought crime
+				em(data-jmpress = "fade after 1s prev").pull-right ...
+			h2(data-jmpress = "fade after 1s prev") Also known as
+				em(data-jmpress = "fade after 1s prev") false reporting
+		p.huge(data-jmpress = "fade after 1s prev") It was the biggest of all treason in our colonies.  Any submitted or uploaded record that went against another witness's account for the event was treated as treason, resulting in a potential death sentence
+section.slide#brother-clide(data-x = "250000", data-scale = "1.4")
+	hgroup.centred(data-jmpress = "fade after 1s step")
+		h1 At the same time, I had been taking care of my little brother, clide
+		h2 He was everything to me
+	p.huge(data-jmpress = "fade after 1s prev") Though I was well-off in terms of my duty, it was often difficult to juggle teaching him mind management techniques
+section.slide.step#assassin-job(data-x = "250500", data-y = "50", data-z = "4000", data-rotate = "35")
+	h1.centred(data-jmpress = "fade after 1s step}") My job, as an assassin, was to slay tyrants
+	p.huge.centred(data-jmpress = "fade after 1s prev") I was an adept in my field... I could almost instantly identify a Tyrant
+section.slide.step#assassin-job(data-x = "251500", data-y = "50", data-scale = "2", data-rotate = "35")
+	h1.centred(data-jmpress = "fade after 1s step") It only came as a shock, when during my training, I was assigned to examine a portion of 20 false records in one gilesian day
+	p.huge.centred(data-jmpress = "fade after 1s prev") But as soon as I tried to think further, Karina swayed my thoughts
+section.slide.step#new-mission(data-x = "252000", data-y = "1000", data-z = "4000", data-rotate = "45")
+	h1.centred(data-jmpress = "fade after 1s step") It was my last mission, my evaulation exam
+	h2.centred(data-jmpress = "fade after 1s step") I set out, as usual, navigating to the coordinates Karina sent me
+	p.huge.centred(data-jmpress = "fade after 1s prev") But something was unusual this time
+section.slide.step#trainer-victim(data-x = "252500", data-y = "2000", data-z = "4000", data-rotate = "90")
+	h1.centred(data-jmpress = "fade after 1s step") The Traitor was
+		em.tech.huge(data-jmpress = "fade after 1s prev") my own trainer
+section.slide.step#kill-trainer(data-x = "253000", data-z = "3000", data-rotate = "45")
+	h1.centred(data-jmpress = "fade after 1s step") I had to choose: slay my trainer, or retreat and flee the galaxy
+	- var killTrainerDialog = {headerText: "Do you kill your trainer, who has trained you since your early childhood?", description: "It seems your supervisor has committed false reporting.  Karina is instructing you to now slay her.  What will you do?", choices: [{name: "Yes.", destination: "#will-kill-trainer"}, {name: "No", destination: "#war-beginning"}]}
+	mixin dialog(killTrainerDialog.headerText, killTrainerDialog.description, killTrainerDialog.choices)
+section.slide.step#will-kill-trainer(data-x = "253500", data-y = "3000", data-z = "3000", data-rotate = "45")
+	h1.centred(data-jmpress = "fade after 1s step") I knew what I had to do
+	p.huge.centred(data-jmpress = "fade after 1s prev") so I slayed her, as Karina instructed.
+
+section.slide.step#war-beginning(data-x = "253500", data-y = "4000", data-z = "3000", data-rotate = "45")
+	h1.centred(data-jmpress = "fade after 1s step") But as soon as I had finished, I interpreted a global broadcast
+	p.centred.type(data-type-delay = "1000", data-jmpress = "fade after 1s prev") .....
+	p.huge.centred(data-jmpress = "fade after 1s prev") Our exoplanet was under siege
+
+section.slide.step#will-kill-trainer(data-x = "254000", data-y = "3000", data-z = "3000", data-rotate = "45")
+	h1.centred(data-jmpress = "fade after 1s step") Karina was calling all assasins to her aid to defend our colony
+	p.huge.centred(data-jmpress = "fade after 1s prev") A woman by the name of Coronni was invading our lands
+	p.pull-right(data-jmpress = "warp-in after 1s prev") It said she had
+		em.larger.scary Bad
+		| intentions
+section.slide.step#join-forces(data-x = "255000", data-y = "3000", data-z = "3000", data-rotate = "45", data-scale = "0.6")
+	h1.centred(data-jmpress = "fade after 1s step") In the disaster, I had no choice, but to aid in defending my planet.  Karina had such control over me
+	p.huge.centred(data-jmpress = "fade after 1s prev") I soon realized, as my mind was controlled, that we stood no chance against Coronni's army
+section.slide.step#cannot-win(data-x = "255500", data-y = "3000", data-z = "3000", data-rotate = "45", data-scale = "0.6")
+	h1.centred(data-jmpress = "fade after 1s step") Below me, I saw hundreds of an unidentifiable species, with an organism just like our own kind.
+	p.huge(data-jmpress = "fade after 1s prev") A woman
+	p.centred.type(data-type-delay = "1000", data-jmpress = "fade after 1s prev") .....
+	p.pull-right.larger(data-jmpress = "fade after 2s prev") It was Coronni
+section.slide.step#join-forces(data-x = "256000", data-y = "3000", data-z = "3000", data-rotate = "45", data-scale = "0.6")
+	h1.centred(data-jmpress = "fade after 1s step") I watched as the creatures destroyed my homeland
+	p.huge.centred(data-jmpress = "fade after 1s prev") While some were being mercelessly killed with photon lasers, others were being captured.

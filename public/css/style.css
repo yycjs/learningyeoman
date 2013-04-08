@@ -450,6 +450,7 @@ table{border-collapse:collapse;border-spacing:0;}
 .small{font-size:85%;}
 .large{font-size:341.25000000000006%;}
 .larger{font-size:931.6125000000003%;}
+i{font-style:italic;}
 body{-webkit-transition:background, max-width 0.5s ease-in;-moz-transition:background, max-width 0.5s ease-in;-ms-transition:background, max-width 0.5s ease-in;-khtml-transition:background, max-width 0.5s ease-in;-o-transition:background, max-width 0.5s ease-in;transition:background, max-width 0.5s ease-in;max-width:1140px;margin:0 auto;color:#ffffff;background:#2e2e2e;background:url("http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/navy_blue.png");line-height:1.4;font-family:"Open Sans",Helvetica,Arial,sans-serif;}
 p{line-height:1.4;padding-bottom:1em;}
 .huge{font-size:2.7300000000000004em;}
