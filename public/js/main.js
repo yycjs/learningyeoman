@@ -43,7 +43,7 @@ jQuery(document).ready(function ($)
 			toastr.info("Choosing a character will affect the way the story unfolds", "Note");
 		}).find(".locked").on('click', function (e)
 			{
-				toastr.error("This story is not yet written.  Please try again later", "Warning");
+				toastr.error("This story is not yet written.  Why not join the story, and write part of it yourself?", "Warning");
 			});
 	}
 	function toggleControls() {
@@ -65,7 +65,7 @@ jQuery(document).ready(function ($)
 			$radios = $slideArea.find("input[type='radio']").on('click', function (e)
 			{
 				if ($(this).attr("data-destination") != "undefined") {
-					$formButton.attr("data-destination", $(this).attr("data-destination"));
+					$formButton.attr("data-destination", $(this).attr("data-destination")).removeAttr("disabled").html($(this).attr("id") + " <i class = 'icon-target-2'></i>");
 				}
 			});
 		$formButton.on('click', function (e)

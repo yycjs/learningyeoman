@@ -1,16 +1,16 @@
 section.slide#opt-intro(data-x = "140000", data-scale = "1.4")
 	div.row
-		hgroup.centred
-			h1 It all began during my training, as I was being assigned my last mission
-			h2 As an assassin for those who committed
-				em.tech Thought Crime
+		hgroup.centred(data-jmpress = "fade after 1s step")
+			h1(data-jmpress = "fade after 1s prev") It all began during my training, as I was being assigned my last mission
+			h2(data-jmpress = "fade after 1s prev") As an assassin for those who committed&nbsp;
+				em.tech(data-jmpress = "drive-left after 1s prev") Thought Crime
 section.slide#thought-crime(data-x = "190000", data-scale = "1.4")
 	div.row
 		hgroup.centred
-			h1(data-jmpress = "fade after 2s slide") Thought crime
+			h1(data-jmpress = "fade after 2s step") Thought crime
 				em(data-jmpress = "fade after 1s prev").pull-right ...
-			h2(data-jmpress = "fade after 1s prev") Also known as
-				em(data-jmpress = "fade after 1s prev") false reporting
+			h2(data-jmpress = "fade after 1s prev") Also known as&nbsp;
+				em.tech(data-jmpress = "fade after 1s prev") false reporting
 		p.huge(data-jmpress = "fade after 1s prev") It was the biggest of all treason in our colonies.  Any submitted or uploaded record that went against another witness's account for the event was treated as treason, resulting in a potential death sentence
 section.slide#brother-clide(data-x = "250000", data-scale = "1.4")
 	hgroup.centred(data-jmpress = "fade after 1s step")
@@ -18,7 +18,7 @@ section.slide#brother-clide(data-x = "250000", data-scale = "1.4")
 		h2 He was everything to me
 	p.huge(data-jmpress = "fade after 1s prev") Though I was well-off in terms of my duty, it was often difficult to juggle teaching him mind management techniques
 section.slide.step#assassin-job(data-x = "250500", data-y = "50", data-z = "4000", data-rotate = "35")
-	h1.centred(data-jmpress = "fade after 1s step}") My job, as an assassin, was to slay tyrants
+	h1.centred(data-jmpress = "fade after 1s step") My job, as an assassin, was to slay tyrants
 	p.huge.centred(data-jmpress = "fade after 1s prev") I was an adept in my field... I could almost instantly identify a Tyrant
 section.slide.step#assassin-job(data-x = "251500", data-y = "50", data-scale = "2", data-rotate = "35")
 	h1.centred(data-jmpress = "fade after 1s step") It only came as a shock, when during my training, I was assigned to examine a portion of 20 false records in one gilesian day
@@ -32,7 +32,7 @@ section.slide.step#trainer-victim(data-x = "252500", data-y = "2000", data-z = "
 		em.tech.huge(data-jmpress = "fade after 1s prev") my own trainer
 section.slide.step#kill-trainer(data-x = "253000", data-z = "3000", data-rotate = "45")
 	h1.centred(data-jmpress = "fade after 1s step") I had to choose: slay my trainer, or retreat and flee the galaxy
-	- var killTrainerDialog = {headerText: "Do you kill your trainer, who has trained you since your early childhood?", description: "It seems your supervisor has committed false reporting.  Karina is instructing you to now slay her.  What will you do?", choices: [{name: "Yes.", destination: "#will-kill-trainer"}, {name: "No", destination: "#war-beginning"}]}
+	- var killTrainerDialog = {headerText: "Do you kill your trainer, who has trained you since your early childhood?", description: "It seems your supervisor has committed false reporting.  Karina is instructing you to now slay her.  What will you do?", choices: [{name: "Yes.  Slay supervisor", destination: "#will-kill-trainer"}, {name: "No.  Run away to save Clide.", destination: "#war-beginning"}]}
 	mixin dialog(killTrainerDialog.headerText, killTrainerDialog.description, killTrainerDialog.choices)
 section.slide.step#will-kill-trainer(data-x = "253500", data-y = "3000", data-z = "3000", data-rotate = "45")
 	h1.centred(data-jmpress = "fade after 1s step") I knew what I had to do
@@ -40,14 +40,14 @@ section.slide.step#will-kill-trainer(data-x = "253500", data-y = "3000", data-z 
 
 section.slide.step#war-beginning(data-x = "253500", data-y = "4000", data-z = "3000", data-rotate = "45")
 	h1.centred(data-jmpress = "fade after 1s step") But as soon as I had finished, I interpreted a global broadcast
-	p.centred.type(data-type-delay = "1000", data-jmpress = "fade after 1s prev") .....
+	p.centred.type.huge(data-type-delay = "1000", data-jmpress = "fade after 1s prev") .....
 	p.huge.centred(data-jmpress = "fade after 1s prev") Our exoplanet was under siege
 
 section.slide.step#will-kill-trainer(data-x = "254000", data-y = "3000", data-z = "3000", data-rotate = "45")
 	h1.centred(data-jmpress = "fade after 1s step") Karina was calling all assasins to her aid to defend our colony
 	p.huge.centred(data-jmpress = "fade after 1s prev") A woman by the name of Coronni was invading our lands
-	p.pull-right(data-jmpress = "warp-in after 1s prev") It said she had
-		em.larger.scary Bad
+	p.pull-right(data-jmpress = "fade after 1s prev") It said she had
+		em.larger.scary(data-jmpress = "expand after 1s prev") Bad
 		| intentions
 section.slide.step#join-forces(data-x = "255000", data-y = "3000", data-z = "3000", data-rotate = "45", data-scale = "0.6")
 	h1.centred(data-jmpress = "fade after 1s step") In the disaster, I had no choice, but to aid in defending my planet.  Karina had such control over me
@@ -55,8 +55,12 @@ section.slide.step#join-forces(data-x = "255000", data-y = "3000", data-z = "300
 section.slide.step#cannot-win(data-x = "255500", data-y = "3000", data-z = "3000", data-rotate = "45", data-scale = "0.6")
 	h1.centred(data-jmpress = "fade after 1s step") Below me, I saw hundreds of an unidentifiable species, with an organism just like our own kind.
 	p.huge(data-jmpress = "fade after 1s prev") A woman
-	p.centred.type(data-type-delay = "1000", data-jmpress = "fade after 1s prev") .....
+	p.centred.type.huge(data-type-delay = "1000", data-jmpress = "fade after 1s prev") .....
 	p.pull-right.larger(data-jmpress = "fade after 2s prev") It was Coronni
 section.slide.step#join-forces(data-x = "256000", data-y = "3000", data-z = "3000", data-rotate = "45", data-scale = "0.6")
 	h1.centred(data-jmpress = "fade after 1s step") I watched as the creatures destroyed my homeland
 	p.huge.centred(data-jmpress = "fade after 1s prev") While some were being mercelessly killed with photon lasers, others were being captured.
+
+section.slide.step#join-forces(data-x = "256500", data-y = "3000", data-z = "3000", data-rotate = "45", data-scale = "0.6", data-next = "#choose-a-character")
+	h1.centred(data-jmpress = "fade after 1s step") I was brutally murdered, and suffered an exhausting, horrible death
+	p.huge.centred.tech.typed(data-jmpress = "fade after 1s prev") The end

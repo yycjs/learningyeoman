@@ -36,6 +36,7 @@ body
 	block footer
 		footer.row.centred.visuallyhidden
 	block scripts
+		block extra-scripts-start
 		script(src = "//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js")
 		script(src = "/js/jquery.migrate.min.js")
 		script(src = "/js/jmpress.custom.js")
@@ -43,3 +44,4 @@ body
 		script(src = "/js/typewriter.js")
 		script(src = "/js/loader.js")
 		script(src = "/js/main.js")
+		block extra-scripts-end

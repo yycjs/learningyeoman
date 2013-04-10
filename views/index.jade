@@ -17,7 +17,7 @@ block content
 						h4.type Press the button to continue
 					button.btn.btn-primary.tech#start.start-show.show-next.transitioned Go&nbsp;
 						i.icon-arrow-right
-			div.row
+			div.row.extended-height
 				aside.pull-right
 					small Web by&nbsp;
 						strong
@@ -25,8 +25,8 @@ block content
 						a(href = "https://github.com/srsgores/dram205", target = "_blank") Fork this on GitHub&nbsp;
 							i.icon-github-2
 				aside.pull-left
-					small Or just&nbsp;
-						a(href = "/plain-story") read the story in plain text
+					a.btn(href = "/edit-story") New!  Edit this story in real-time&nbsp;
+						i.icon-pencil-2
 		section.slide.toggle-controls#intro(data-y = "-4500", data-x = "3500", data-z = "5000", data-duration = "11000")
 			include intro
 		section.slide#the-war(data-x = "7000", data-duration = "25000", data-rotate = "90", data-z = "1000", data-scale = "2.4")
@@ -61,7 +61,7 @@ block content
 				| they existed in a more sophisticated form…
 				span.tech(data-jmpress = "fade after 1s prev") even more sophisticated than us.
 		section.slide#sill-fight(data-x = "8000", data-scale = "2")
-			hgroup(data-jmpress = "fade after 0.5s step")
+			hgroup(data-jmpress = "fade after 1s step")
 				h1.centred But what’s most fascinating is that humans still fought.
 				h2(data-jmpress = "fade after 1s prev") They still fought over
 				h3.tech-fat.larger(data-jmpress = "fade after 1s prev") land
@@ -79,4 +79,4 @@ block content
 			include choose
 			include coronni-story
 			include optunna-story
-			include sibreo-story
+			//include sibreo-story

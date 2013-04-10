@@ -1,5 +1,11 @@
 extends layout
 
+block header
+	nav(role = "main").toolbar.row
+		a.btn(href = "/") Home&nbsp;
+			i.icon-home
+		a.btn(href = "#firepad") Edit Story&nbsp;
+			i.icon-pencil-2
 block content
 	article(role = "main").row
 		section#prologue
@@ -77,11 +83,20 @@ block content
 				p
 					i After Sibreo returns home, he is asked by his wife to  
 
-article#characters
-	Coronni	TinBu leader of the elite commander squad, mother of two religious TinBu leaders
-	Sibreo	Officer of financial affairs in the district of Yiqhea on Mars
-	Optunna	Young mercenary responsible for the execution of dominating religious leaders
-	Huddiu	Collective policy agent in foreign affairs for known colonized planets in the Collective
-	Mina	Young woman civilian, raising three orphaned children.  Works as a Reinforcer on the side.
-	Clide	Mina’s youngest, orphaned brother.  (has secret roles too)
-
+	article#characters
+		Coronni	TinBu leader of the elite commander squad, mother of two religious TinBu leaders
+		Sibreo	Officer of financial affairs in the district of Yiqhea on Mars
+		Optunna	Young mercenary responsible for the execution of dominating religious leaders
+		Huddiu	Collective policy agent in foreign affairs for known colonized planets in the Collective
+		Mina	Young woman civilian, raising three orphaned children.  Works as a Reinforcer on the side.
+		Clide	Mina’s youngest, orphaned brother.  (has secret roles too)
+	article#firepad
+		h1 Continue this Story&nbsp;
+			a(href = "#firepad", class = "show-pad")
+				i.icon-pencil
+block extra-scripts-start
+	script(src = "https://cdn.firebase.com/v0/firebase.js")
+	script(src = "/js/codemirror.js")
+	script(src = "/js/firepad.js")
+block extra-scripts-end
+	script(src = "/js/editStory.js")

@@ -10,5 +10,5 @@ mixin dialog(title, description, choices, destination)
 					data-destination = choice.destination)
 					| #{choice.name}
 		div.row.form-actions
-			button.transition-all(type="submit") Make Choice &nbsp;
-				i.icon-checkmark
+			button.transition-all(type="submit", name = "Make Choice", disabled) Select Choice &nbsp;
+				i.icon-target

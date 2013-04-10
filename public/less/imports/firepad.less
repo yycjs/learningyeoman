@@ -1,0 +1,237 @@
+/*------------------------------------------------------------------------------------------------------------------------
+ Author: Sean Goresht
+ www: http://seangoresht.com/
+ github: https://github.com/srsgores
+
+ twitter: http://twitter.com/S.Goresht
+
+ Mindness experimental interactive story app
+ Licensed under the GNU Public License
+
+ =============================================================================
+ Filename:  firepad.less
+ =============================================================================
+ This file is responsible for setting codemirror editor colours.
+
+ --------------------------------------------------------------------------------------------------------------------- */
+
+.firepad {
+	min-height: 25em;
+	position: relative;
+	text-align: left;
+	line-height: normal;
+	.CodeMirror {
+		position: absolute;
+		height: auto;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+}
+
+.firepad-richtext .CodeMirror {
+	font-size: @fontSizeMedium;
+}
+
+.firepad-with-toolbar .CodeMirror {
+	top: 7em;
+	left: 0;
+}
+
+.firepad-b {
+	font-weight: bold;
+}
+
+.firepad-i {
+	font-style: italic;
+}
+
+.firepad-u {
+	text-decoration: underline;
+}
+
+.firepad-fs-9 {
+	font-size: 9px;
+}
+
+.firepad-fs-10 {
+	font-size: 10px;
+}
+
+.firepad-fs-12 {
+	font-size: 12px;
+}
+
+.firepad-fs-14 {
+	font-size: 14px;
+}
+
+.firepad-fs-18 {
+	font-size: 18px;
+}
+
+.firepad-fs-24 {
+	font-size: 24px;
+}
+
+.firepad-fs-32 {
+	font-size: 32px;
+}
+
+.firepad-fs-42 {
+	font-size: 42px;
+}
+
+.firepad-f-arial {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.firepad-f-comic-sans-ms {
+	font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.firepad-f-courier-new {
+	font-family: "Courier New", Courier, monospace;
+}
+
+.firepad-f-impact {
+	font-family: Impact, Charcoal, sans-serif;
+}
+
+.firepad-f-times-new-roman {
+	font-family: "Times New Roman", Times, serif;
+}
+
+.firepad-f-verdana {
+	font-family: Verdana, Geneva, sans-serif;
+}
+
+.firepad-c-black {
+	color: black;
+}
+
+.firepad-c-red {
+	color: red;
+}
+
+.firepad-c-green {
+	color: green;
+}
+
+.firepad-c-blue {
+	color: blue;
+}
+
+.firepad-c-yellow {
+	color: yellow;
+}
+
+.firepad-c-cyan {
+	color: cyan;
+}
+
+.firepad-c-magenta {
+	color: magenta;
+}
+
+.firepad-c-grey {
+	color: grey;
+}
+
+.powered-by-firepad {
+	position: absolute;
+	display: block;
+	z-index: 5;
+	right: @margin;
+	bottom: @margin;
+	width: 8em;
+	height: @paddingLarge;
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIEAAAAXCAYAAAAsnywOAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDowN0M3OUFEQTk4ODUxMUUyQUFBRTg2NUQxMTExQTUxQyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDowN0M3OUFEQjk4ODUxMUUyQUFBRTg2NUQxMTExQTUxQyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkRBNEIyOTA5OTg4NDExRTJBQUFFODY1RDExMTFBNTFDIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkRBNEIyOTBBOTg4NDExRTJBQUFFODY1RDExMTFBNTFDIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+o21teAAABctJREFUeNrEWttV8zgQFjl5X1EBTgVr3vKGqYBQQZIKgAoMFUAqiKkgTgUxT/CGUwH+K8DbwVrnjDbzKzOjS9jdOUcnCVjyXD7NTTp7f39XkZQPoxjGn8PI4Lulbhi3w2jht4bnzXMX8Jkx6zbD+DWMSnj3Yhh38H2J3vMTlCN+DfUeXixlwJPVSwfrtDBeE/g0a85hbhf4fDmM7TDqmBdNp1N1FgACDco3Rp/Bb4mM8p6G8ZxojEeY79Ia+MC0DDSUS8ZYV/ApAfMFeOmZ/5fAr4/MOg8R/O3Q5jIgWMEaHN0jfdvnK4HvIBBoMPgNfP7X5AJBUnYIEGYA4sLxXD8NSokePIa09AxGdeksYU7l8w4GBCMCUQaF3yDk/wEAatdKu03i07jor2FsYI0i4f17ZuctItcpPV5UC8ZUHt63Qvg0sn+iMHdEY0dhsS68g9E6rmcPa2We+XieXWvr5BTrAD7WkFP0xN+zRPD1sHtrxqCxZL1rRQD1MzBnaZj/3QTM3YFHe5FAoAONXiND9Z5nS/h8A0apmN4yqG+B8ewEBfeRgLbJ3J4Bld1dOhFYc4LHTeDcPzxGdmXJGE9zA8n7P7KNnF0pZbGG+QnsjiZAwS28jNtNPfO+BRj/ixDOzLlm5t0xPEjUILkmwO8T8MvJd8XkDecQt8/g+5LI7AtC1lBPlXt0jcnKQslRgH41BYIeGO8j405MbHcNIClZMwBo4LMnlJQH8rwEY10zxpISTDf/qIkKQqPhyxNS9SflLQXwdQuAeHT4yzEQRgSizgmldLH1J2GgLNBAnLDYA3BeJCeAVjNAK8AIdjwHGGxDGPYV8b2A+P4F62nPeplQSVAhTwuhjNODLdkvCSCUbk6AGw9ZpFv1EZW41IygGVNnt6iJEuNGMybkLJj3L5k1HoXyLDSud45X4UrSF9BZwezwlPyhg420RiC5//j4WI0dpnom9mwRExpqbktvgmvnBOaSylww5KcnLlIhpgiY44IjJ8LNPBJkHK08fDWoJ9EQILg60SO3INs3ts0YjLpTv7dLqRJsLSheqhSoWP0akXSpwH4FFdtTSzlNxPhTCTeLSkEGqT+xAF20sF6XwMcRsEbq0PdOFdjXhYvJ2lOaUzahperv2OZQBbHTl9XHUANrvnj0VavDWUzJhFAbLmfgGWeCjjn9rqU+wSlC1h4X6xqtSSiDKCC9Kr5HvmYA0xBA9x30NJG82UR6RQBqHlF5+DxWz4Skvwi9lsz6b2MQ/jExvnRMIsUBQCm+z58FKncFCu483ilnXHKVIKuJ0/eCJ2oBKHukF07GxQ9svB71azJCVtxx3QiezPBZjZEhpfZsDQu/CeVZaB28OgEEvtM0KQQ1gQDQhGfh8p1JZFwuBe8U4wVwyCoYj1p6wph57+10Ou3HaHfeEfXlRMW1Xl33lhHIywJqWyWUY3O0CyRDKk8ymqPncojBOdGTkAAaAwDOCzyAjmeMh6FKdu1Jpn09j1ahlv0YMZgTbjsUABoplbpsghWxQ8lc7eklcHnDDgzQoBK1c4QsIiocl3YOf6ckhlIu0CLvZN53AfG8QSCkjqy1J+RKdHRHYiwgPaZNHHvsbGMVLps0s0u4I9iMaPo0sON/nWgwDZ6xFnZbk+AZJe9UEfLFJou+BP6J4nsU0XjxJSopdCGUjT0A5DrC7RbgCn/i2tmDJxy0kaDSTK4l5Q9U67lzbBNySHatDucuigNBm9h4kBobPqrV7zd2toTbsrxdquNDEEnhXcJOxUq+dJTbnugpe8LgvUfnSwYkywAw2g00kYxvCV8vK9ThgCT2TpyZ84VQ26O4tke7qfEgdwPur1b8ieZC+a+9naMEibsX2anDhdBOHV9oceX7dhR/mRBibGfWHrP7Nt4CeQNbxTVE2PhEsqxiymDujmGRuItsFtud6FUyFX7DdqYOJ4Ia1c+VUAnElLju+woiCf235HP16quGshS5DAj+FmAA6gfBqr4bldAAAAAASUVORK5CYII=');
+	.opacity(50);
+	.transition(opacity @transition-time);
+}
+
+.powered-by-firepad:hover {
+	.opacity(100);
+}
+
+.firepad-toolbar {
+	position: absolute;
+	.user-select(none);
+	width: @rowWidth;
+	border-top: 1px solid @borderColour;
+	background: rgba(217, 217, 217, 0.2);
+	padding: @margin 0;
+	.firepad-btn-group > .firepad-btn {
+		.border-radius(0);
+		margin: 0 -1px 0 0;
+	}
+	.firepad-btn-group > .firepad-btn:first-child {
+		.border-radius-top(@borderRadius);
+	}
+	.firepad-btn-group > .firepad-btn:last-child {
+		.border-radius-bottom(@borderRadius);
+	}
+}
+
+
+.firepad-btn-group a {
+	padding: @paddingLarge;
+	.btn
+}
+a.firepad-btn-bold {
+	font-weight: bold;
+}
+
+a.firepad-btn-italic {
+	font-family: "Times", serif;
+	font-style: italic;
+	font-size: @fontSizeMedium;
+}
+
+a.firepad-btn-underline {
+	text-decoration: underline;
+}
+
+.firepad-dropdown {
+	position: relative;
+}
+
+.firepad-dropdown-menu {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 1000;
+	display: none;
+	float: left;
+	padding: @paddingMini 0;
+	margin: @paddingMini 0 0;
+	list-style: none;
+	background-color: #ffffff;
+	border: 1px solid #cccccc;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	*border-right-width: 2px;
+	*border-bottom-width: 2px;
+	.box-shadow(0 5px 10px rgba(0, 0, 0, 0.2));
+	a {
+		text-align: left;
+		display: block;
+		padding: @paddingMini @padding;
+		clear: both;
+		font-weight: normal;
+		line-height: 1.8;
+		color: #333333;
+		white-space: nowrap;
+	}
+	a:hover {
+		color: #ffffff;
+		text-decoration: none;
+		background-color: #ffbf86;
+	}
+}
+
+.firepad-color-dropdown-item {
+	height: @paddingLarge;
+	width: @paddingLarge;
+}
