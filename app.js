@@ -38,7 +38,7 @@ app.configure("development", function ()
 app.get("/", routes.index);
 //app.get("/users", user.list);
 app.get('/edit-story', function(req, res){
-	res.render("plainstory", { title: "Drama 205: Final Project - Plain Story", description: "Interactive comic-style story-telling HTML5 application" });
+	res.render("plainstory", { title: "Drama 205: Final Project - Interactive, Plain Story", description: "Interactive comic-style story-telling HTML5 application" });
 });
 
 http.createServer(app).listen(app.get("port"), function ()
