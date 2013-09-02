@@ -3,11 +3,16 @@ jQuery(document).ready(function ($)
 	var animationSpeed = "slow";
 	var $slideArea = $("#jmpress");
 	var $contentArea = $("#content");
-	var $loader = $("#ajaxloader1");
 	var $controls = $(".controls");
-	var $showNext = $contentArea.find(".show-next");
+	var $showNext = $contentArea.find(".show-next, .start-show");
 	var $showPrev = $contentArea.find(".show-prev");
 	var $typedSelector = $(".type");
+	var $htmlFirepad = $("#live-code-1"),
+		$scssFirepad = $("#live-code-2"),
+		$generatorFirepad = $("#live-code-3"),
+		htmlFirebaseLink = "https://yeoman-tutorial.firebaseio.com/",
+		scssFirebaseLink = "https://yeoman-tutorial-sass.firebaseio.com/",
+		generatorFirebaseLink = "https://yeoman-tutorial-generator.firebaseio.com/";
 	var $body = $("body");
 	$slideArea.jmpress({
 		stepSelector: "section",
@@ -20,60 +25,26 @@ jQuery(document).ready(function ($)
 			$slideArea.jmpress("next");
 			return false;
 		});
+
 		$showPrev.on("click", function (e)
 		{
 			$slideArea.jmpress("prev");
 			return false;
 		});
-
-		toastr.info("Navigate to the next slide, using the arrow keys on your keyboard", "Hint")
-	}
-	function toggleLoading(selector) {
-		if (selector.length == 0) {
-			return;
-		}
-		selector.toggleClass("loading visuallyhidden");
-		$loader.toggle(animationSpeed);
-	}
-
-	function characterSelect() {
-		var $characterSelect = $("#choose-a-character");
-		$characterSelect.on('enterStep', function (e)
-		{
-			toastr.info("Choosing a character will affect the way the story unfolds", "Note");
-		}).find(".locked").on('click', function (e)
-			{
-				toastr.error("This story is not yet written.  Why not join the story, and write part of it yourself?", "Warning");
-			});
 	}
 	function toggleControls() {
 		$controls.toggle(animationSpeed);
 	}
 	function checkSupport () {
 		if (Modernizr.csstransforms == false) {
-			toastr.warning("Your browser does not appear to support CSS3 transforms.  Please note that the browser experience will likely suck or really lack stuff.  Maybe time to upgrade your browser (Chrome, Firefox, Opera)?", "Warning");
+			alert("Your browser does not appear to support CSS3 transforms.  Please note that the browser experience will likely suck or really lack stuff.  Maybe time to upgrade your browser (Chrome, Firefox, Opera)?", "Warning");
 		}
 		if (Modernizr.cssanimations == false) {
-			toastr.error("Your browser does not appear to support CSS3 animations.  This really is bad, and it means your experience is limited.  Maybe upgrade to Chrome, Firefox, or Opera?");
+			alert("Your browser does not appear to support CSS3 animations.  This really is bad, and it means your experience is limited.  Maybe upgrade to Chrome, Firefox, or Opera?");
 		}
 		if (Modernizr.csstransforms3d == false) {
-			toastr.warning("Your browser does not appear to support CSS3 3d Transforms.  This is not so bad, but you should probably consider upgrading to a browser that has this (Chrome, Firefox, Opera.", "Warning");
+			alert("Your browser does not appear to support CSS3 3d Transforms.  This is not so bad, but you should probably consider upgrading to a browser that has this (Chrome, Firefox, Opera.", "Warning");
 		}
-	}
-	function makeChoices() {
-		var $formButton = $slideArea.find(".choices button[type='submit']"),
-			$radios = $slideArea.find("input[type='radio']").on('click', function (e)
-			{
-				if ($(this).attr("data-destination") != "undefined") {
-					$formButton.attr("data-destination", $(this).attr("data-destination")).removeAttr("disabled").html($(this).attr("id") + " <i class = 'icon-target-2'></i>");
-				}
-			});
-		$formButton.on('click', function (e)
-		{
-			$slideArea.jmpress("goTo", $(this).attr("data-destination"));
-			return false;
-		});
-
 	}
 	function makeTyped() {
 		$slideArea.find(".slide").on('enterStep', function (e)
@@ -103,13 +74,54 @@ jQuery(document).ready(function ($)
 			}
 		});
 	}
+	function initFirepad(elem, url) {
+
+		firepadRef = new Firebase(url);
+		// Create CodeMirror (with line numbers and the JavaScript mode).
+		var codeMirror = CodeMirror(elem[0], {
+			lineNumbers: true,
+			mode: "javascript"
+		});
+
+		// Create Firepad.
+		var firepad = Firepad.fromCodeMirror(firepadRef, codeMirror);
+
+	}
+	function setupFirepads() {
+		var hasInit = false,
+			hasInit2 = false
+			hasInit3 = false;
+		var $htmlCoding = $("#coding-the-html5-app").on("enterStep", function ()
+		{
+			if (hasInit === true) {
+				return;
+			}
+			initFirepad($htmlFirepad, htmlFirebaseLink);
+			hasInit = true;
+		}),
+		$scssCoding = $("#css-stuff").on("enterStep", function (e)
+		{
+			if (hasInit2 === true) {
+				return;
+			}
+			initFirepad($scssFirepad, scssFirebaseLink);
+			hasInit2 = true;
+		}),
+		$generatorCoding = $("#coding-the-generator").on("enterStep", function (e)
+		{
+			if (hasInit3 === true) {
+				return;
+			}
+			initFirepad($generatorFirepad, generatorFirebaseLink);
+			hasInit3 = true;
+		});
+	}
 	function main() {
 		checkSupport();
 		setTemplates();
 		startButton();
-		characterSelect();
-		makeChoices();
 		makeTyped();
 		setColours();
+		setupFirepads();
 	}
 });

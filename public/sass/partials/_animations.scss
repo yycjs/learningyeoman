@@ -1,0 +1,154 @@
+@import "companimation";
+@import "companimation/preset/fade/fadeIn";
+
+@for $i from 1 through 10 {
+	%delayed-#{$i} {
+		@include animation-delay(($i * $transitionTime));
+	}
+}
+
+
+.container {
+	@extend %fadeIn;
+}
+
+#content {
+	@extend %fadeIn;
+	@extend %delayed-2;
+}
+
+.slide {
+	@extend %fadeIn;
+	@extend %delayed-3;
+}
+
+.controls {
+	@extend %fadeIn;
+	@extend %delayed-5;
+}
+.will-appear {
+	@extend %opacity-0;
+}
+
+.do-appear {
+	@extend %opacity-1;
+}
+
+
+.will-drive-right, .will-drive-left {
+	@extend %relative;
+	@include transition(opacity $transitionTime left ($transitionTime * 2));
+	@extend %opacity-0;
+}
+.will-drive-right {
+	left: -40em;
+}
+.will-drive-left {
+	left: 40em;
+}
+.will-drive-down, .will-drive-up {
+	@include transition(opacity $transitionTime top ($transitionTime * 2));
+	@extend %relative;
+	@extend %opacity-0;
+}
+.will-drive-down {
+	top: -40em;
+}
+.will-drive-up {
+	top: 40em;
+}
+
+.do-drive-up, .do-drive-down {
+	@extend %opacity-1;
+	top: 0;
+}
+.do-drive-right, .do-drive-left {
+	@extend %opacity-1;
+	left: 0;
+}
+
+.will-expand {
+	@extend %transition-all;
+
+	@extend %opacity-0;
+
+	@include translate3d(0 0 1px);
+	@include scale(0.7);
+}
+
+.do-expand {
+	@extend %opacity-1;
+	@include scale(1);
+}
+
+.has-expand {
+	@include transition(none);
+}
+
+
+.will-fade {
+	@include transition(opacity $transitionTime);
+	@extend %opacity-0;
+}
+.will-fade-slow {
+	@include transition(opacity ($transitionTime * $multiplierLarge));
+	@extend %opacity-0;
+}
+.will-fade-fast {
+	@include transition(opacity $transitionTime);
+	@extend %opacity-0;
+}
+
+.do-fade, .do-fade-slow, .do-fade-fast {
+	@extend %opacity-1;
+}
+
+
+.will-warp-right, .will-warp-left {
+	@extend %relative;
+	@include transition(opacity 0.2s, left 0.5s $transitionFunction);
+	@extend %opacity-0;
+}
+
+.will-warp-right {
+	left: -60em;
+}
+.will-warp-left {
+	left: 60em;
+}
+.will-warp-down, .will-warp-up {
+	position: relative;
+	@include transition(opacity 0.2s, top 0.5s $transitionFunction);
+	@extend %opacity-0;
+}
+.will-warp-down {
+	top: -60em;
+}
+.will-warp-up {
+	top: 60em;
+}
+
+.do-warp-up, .do-warp-down {
+	@extend %opacity-1;
+	top: 0;
+}
+.do-warp-right, .do-warp-left {
+	@extend %opacity-1;
+	left: 0;
+}
+
+.will-zoom {
+	@extend %transition-all;
+
+	@extend %opacity-0;
+	@include transition(translate3d(0,0,1px) scale(10,10));
+}
+
+.do-zoom {
+	@extend %opacity-1;
+	@include transition(translate3d(0,0,1px) scale(1,1));
+}
+
+.has-zoom {
+	@include transition(none);
+}

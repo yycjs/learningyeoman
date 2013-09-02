@@ -21,12 +21,6 @@ app.configure(function ()
 	app.use(express.cookieParser("your secret here"));
 	app.use(express.session());
 	app.use(app.router);
-	app.use(require("less-middleware")(
-		{ src: __dirname + "/public/less",
-			compress: true,
-			optimization: 1,
-			prefix: "/css",
-			dest: __dirname + "/public/css"}));
 	app.use(express.static(path.join(__dirname, "public")));
 });
 

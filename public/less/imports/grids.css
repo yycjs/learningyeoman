@@ -1,5 +1,0 @@
-NameError: .border-box is undefined in C:\Users\Sean\Documents\GitHub\dram205\public\less\imports\grids.less:6:1
-5 	width: 100%;
-6 	.border-box; //margin: remember that this will be exclusive to media queries still, as it depends on the resolution!
-7 	overflow: hidden;
-

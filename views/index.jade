@@ -8,75 +8,22 @@ block content
 			i.icon-arrow-right
 	article#jmpress
 		section.slide.toggle-controls#welcome
-			div.teaser.borderless.top-centred
-				div.centred.row.extended-height
-					hgroup
-						h1.title Welcome to&nbsp;
-							em.tech Mindness
-						h2.subtitle.description.type An interactive story
-						h4.type Press the button to continue
-					button.btn.btn-primary.tech#start.start-show.show-next.transitioned Go&nbsp;
-						i.icon-arrow-right
-			div.row.extended-height
-				aside.pull-right
+			header.intro
+				h1.title Introduction to&nbsp;
+					em Yeoman
+				h2.subtitle.description.type Improving your front-end workflow with scaffolding tools
+			h4 Press the button to continue
+				button.btn.btn-primary#start.start-show Go&nbsp;
+					i.icon-arrow-right
+			footer
+				aside
 					small Web by&nbsp;
 						strong
 							a(href = "http://seangoresht.com", target = "_blank") Sean Goresht&nbsp;&nbsp;
-						a(href = "https://github.com/srsgores/dram205", target = "_blank") Fork this on GitHub&nbsp;
+						a(href = "https://github.com/srsgores/learning-yeoman", target = "_blank") Fork this on GitHub&nbsp;
 							i.icon-github-2
-				aside.pull-left
-					a.btn(href = "/edit-story") New!  Edit this story in real-time&nbsp;
-						i.icon-pencil-2
 		section.slide.toggle-controls#intro(data-y = "-4500", data-x = "3500", data-z = "5000", data-duration = "11000")
+			header
+				h1 Hi there
+					i.icon-happy.full-icon
 			include intro
-		section.slide#the-war(data-x = "7000", data-duration = "25000", data-rotate = "90", data-z = "1000", data-scale = "2.4")
-			hgroup.centred
-				h1.title(data-jmpress = "fade after 1s step")
-					| The war begin in 2135.
-					em(data-jmpress = "fade after 1s prev") ......
-					span(data-jmpress = "fade after 1s prev") Lighting spheres lit the skies, which were operated by charged superconductors.
-				h2.type
-					| Half the people’s population was heavily dispersed amongst other exoplanets, Gilese 581 g being one of them, which was colonized in 2094
-		section.slide#civilization(data-x = "7500",data-duration = "25000")
-			h1.centred(data-jmpress = "fade after 1s step") At this point, civilization
-				em.huge(data-jmpress = "fade after 1.5s prev") thrived.
-			p.huge.centred.tech.type Human life had been extended by over 230 years, and what we call ourselves could just maybe be called people.
-		section.slide#human(data-x = "7500", data-duration = "6000", data-rotate = "45", data-z = "-1200")
-			h1.title.centred(data-jmpress = "fade after 1s step")
-				| But we were still
-				em.tech-huge.huge(data-jmpress = "fade after 1.5s prev") &nbsp;human&nbsp;.
-		section.slide#slide-4(data-x = "12500", data-duration = "10000")
-			h1.centred(data-jmpress = "fade after 1s step") My story begins where yours ends.
-			p.huge.centred.type(data-jmpress = "fade-slow after 2s prev") You see, us so-called “humans” have been around for millennia.  What used to be taught in what I was told was called school was that we have been around no more than 4 million years.  Before that came micro-species, other micro-organisms, which were later documented by mankind.
-		section.slide#lies(data-x = "12500", data-duration = "6000", data-z = "-5000", data-scale = "0.5")
-			h1.title.centred(data-jmpress = "fade after 1s step") It was all
-				em.huge.scary(data-jmpress = "fade-slow after 1.2s h1") lies .
-		section#the-truth.slide(data-x = "2000")
-			hgroup
-				h1.title.centred.type The truth is not that simple.
-				h2.type It’s likely that this process which has been governing our multiverse in all observable dimensions has repeated itself multiple times since The Conflict.
-		section#sophisticated.slide(data-x = "4000", data-scale = "0.8")
-			p.huge.centred(data-jmpress = "fade after 1s step") Even before the first age of mankind, humans existed; &nbsp;
-				span(data-jmpress = "fade after 2s prev") in fact&nbsp;
-				| they existed in a more sophisticated form…
-				span.tech(data-jmpress = "fade after 1s prev") even more sophisticated than us.
-		section.slide#sill-fight(data-x = "8000", data-scale = "2")
-			hgroup(data-jmpress = "fade after 1s step")
-				h1.centred But what’s most fascinating is that humans still fought.
-				h2(data-jmpress = "fade after 1s prev") They still fought over
-				h3.tech-fat.larger(data-jmpress = "fade after 1s prev") land
-				h3.tech.large(data-jmpress = "fade after 1s prev") matter
-			p.huge.pull-right(data-jmpress = "fade after 2s prev")
-				| items they thought valuable
-		section#dyshtas-1.slide(data-x = "12000")
-			h1.centred(data-jmpress = "fade after 2s step") The genus I speak about is now known as the Dyshtas
-			p.huge.centred.type(data-jmpress = "fade after 1s prev") Only recently, our collective discovered remnants of their kind. Some of our greatest minds have attempted to solve the puzzles of their ancestry, but this has led to no conclusive evidence.  What has been discovered, however, is that the species, like us in our earlier forms, competed against its own kind.  Recent studies have posited that they fought each other with such contempt that they brought Armageddon on themselves, in all worlds in which they lived.
-		section.slide#dyshtas-repeat(data-x = "15000", data-y = "900", data-z = "-400", data-rotate = "40")
-			h1.centred(data-jmpress = "fade after 2s step") But the process of armageddon repeats itself
-			p.huge.centred.type(data-jmpress = "expand after 1s prev") Just as the legends say...
-
-		section.slide.toggle-controls#choose-a-character(data-z = "-5000")
-			include choose
-			include coronni-story
-			include optunna-story
-			//include sibreo-story

@@ -1,8 +1,185 @@
-div.row.centred
-	p.huge.type By the time you read this, the worlds may have
-		em.scary burned
-		| to a crisp.
-	p.huge.type Things have been
-		em.tech-skinny.type &nbsp;fragile&nbsp;
-		| here in our worlds.
-	p.pull-left.type Civilization is now at the cusp of extinction.  This isn’t a zombie story.  No; it’s more of an “I’m in more trouble than you are” story.
+section.slide#about-me(data-x = "2000", data-z = "1000")
+	header
+		h1 About Me
+	ul
+		li I go to U of C
+		li I write code for a design agency -
+			a(href = "http://mantaraycreative.com", target = "_blank") Mantaray Creative
+		li I am front-end
+		li Been using Express and Node for about 1 year
+		li Some of you may recognize me
+		li I like the newest stuff...
+section.slide#the-plan(data-x = "2000", data-z = "500", data-y = "1000")
+	header
+		h1 The Plan
+	ol
+		li Overview of what Yeoman does
+		li Yeoman use cases
+		li Yeoman Alternatives
+		li A live example...
+			small of what we'll make
+		li Live coding --
+			strong everyone participates!
+		li Putting it all together.  Choices, choices, choices.
+		li Last words.  Subgenerators.
+		li Questions
+section.slide#the-problem(data-x = "2000", data-z = "-500", data-y = "2000")
+	header
+		h1 The Problem
+			i.icon-sad
+		p Copy paste
+		p Copy paste
+		p Copy, paste
+	footer
+		p Does this sound familiar to you?
+		p
+			small Did you do this the last time you started a new project?
+section.slide#the-solution-yeoman(data-x = "3500", data-z = "-500", data-y = "2000")
+	header
+		h1 Introducing Yeoman
+	p Yeoman is a tool for
+		strong generating
+		| new projects from scratch.  It saves us time from copying old project files to new projects...
+	blockquote Yeoman is an easy way to scaffold out new applications
+	section.slide#introducing-yeoman(data-x = "3500", data-z = "-1000", data-y = "2000", data-scale = "1.5", data-rotate = "180")
+		p Yeoman is a command-line tool
+		p It runs in NodeJS, and it prompts you via command line (terminal for Mac folks)
+		figure
+			img(src = "/img/yeoman-command-line-result.png", alt = "Yeoman Command-Line")
+			figcaption Yeoman on the command line
+section.slide#some-pretext(data-x = "4500", data-z = "-800", data-y = "200")
+	header
+		h1 Some Pretext
+	p I wrote a very detailed tutorial&nbsp;
+		a(href = "http://seangoresht.com/index.php/tutorials/item/getting-started-with-yeoman", target = "_blank", title = "Getting Started with Yeoman Tutorial") on my website.
+	a.btn(href = "http://seangoresht.com/index.php/tutorials/item/getting-started-with-yeoman", target = "_blank", title = "Getting Started with Yeoman Tutorial") Read Tutorial&nbsp;
+		i.icon-external-link
+section.slide#alternatives(data-x = "4500", data-z = "-500", data-y = "2000", data-rotate = "35")
+	header
+		h1 But is Copy-Paste Really that Bad?
+	p No, it's not...
+		small not really.
+	p Copy paste is nice if you have noobs on your team
+	section.slide#there-are-alot-of-alternatives(data-x = "4500", data-z = "-1200", data-y = "2000", data-rotate = "80", data-scale = "1.4")
+		header
+			h1 Alternatives
+		p There are alternatives...
+			strong absolutely
+		ul
+			li Command-line utilities
+				ul
+					li Powershell scripting
+					li Scripting in X language of your choice: console, C#, Visual Basic, etc.
+					li Applescript?&nbsp;
+						small (Oh yeah, people actually use that)
+					li Objective C?&nbsp;
+						small (don't even get me started)
+					li Codecanyon generators.&nbsp;
+						small There is even a category!
+			li JS alternatives
+				ul
+					li brunch
+					li Angular generators written in Python
+					li ... pretty much, you name it
+section.slide#get-started(data-x = "4500", data-z = "-3500", data-y = "2000", data-rotate = "90")
+	header
+		h1 Let's Get Started
+			i.icon-hand-right.full-icon
+	i.icon-hamburger.full-icon
+	section.slide#install-node(data-x = "4500", data-z = "-2500", data-y = "2000", data-rotate = "90")
+		header
+			h1 NodeJS Plz
+		p Install Node.
+		p
+			small If you don't know what Node is, you need to read up on it
+		figure
+			img(src = "/img/node-check.png")
+			figcaption Installing Node on PC
+		section.slide#OMGZ-RESTART(data-x = "4500", data-z = "-6000", data-y = "2000", data-rotate = "300")
+			header
+				h1 RESTART
+					strong
+						NOW
+			i.icon-repeat.full-icon(style = "font-size: 15em;")
+	section.slide#install-yeoman(data-x = "5500", data-z = "-5000", data-y = "2000", data-rotate = "90")
+		header
+			h1 Install Yeoman
+		pre
+			code npm install -g yo
+		p NPM does everything for
+			strong yo
+		section.slide#check-for-success(data-x = "4500", data-z = "-6000", data-y = "2000", data-rotate = "90")
+			header
+				h1 Try It Out
+			pre
+				code yo
+			figure
+				img(src = "/img/check-yeoman.png")
+				figcaption Check Yeoman Installation
+	section.slide#install-generator(data-x = "5500", data-z = "-4000", data-y = "2000", data-rotate = "35")
+		header
+			h1 Install a Generator!
+		p The inception starts now
+		section.slide#install-generator-generator(data-x = "6500", data-z = "-4000", data-y = "2000", data-rotate = "35")
+			header
+				h1 Install
+					code generator-generator
+			pre
+				code npm install -g generator-generator
+		section.slide#generators-explained(data-x = "7500", data-z = "-4000", data-y = "2000", data-rotate = "35")
+			header
+				h1 About Generators...
+			p Generators are yeoman (nodejs) apps that scaffold out (generate) new apps
+			p In our case, that's an HTMl5 app
+			p When you make a new generator, you are using a generator
+			footer
+				p Ok...
+					small Now for the fun
+section.slide#our-project-goal(data-x = "8500", data-z = "-4000", data-y = "2000", data-rotate = "35")
+	header
+		h1 Our Goal
+			small (HTML5 App)
+	p We will create a new yeoman app to automatically generate the following for us, saving us time in the future:
+	ul
+		li
+			code script&nbsp;
+			| tags, so we can automatically specify which JS files to use in a given project
+		li
+			code style&nbsp;
+			| tags, so we can import whatever front-end framework we want
+		li Author and project information, including licensing details, which will be appended to the beginning of each file, in a block-style comment
+section.slide#generator-start(data-x = "10500", data-z = "-4000", data-y = "2000", data-rotate = "35")
+	header
+		h1 The Next Generation
+	pre
+		code yo generator-generator
+	p Enter your creds
+	figure
+		img(src = "/img/generator-generator-install.png")
+		figcaption Scaffolding out a new generator
+section.slide#fun-coding-time(data-x = "10500", data-z = "-2000", data-y = "2000", data-scale = "1.6")
+	header
+		h1 Fun Coding
+			i.icon-html5.full-icon
+section.slide#coding-the-html5-app(data-x = "12500", data-z = "-2500", data-y = "2000", data-scale = "1.1")
+	header
+		h1 Let's code in
+			i.icon-html5
+	div#live-code-1
+section.slide#css-stuff(data-x = "13500", data-z = "-3000", data-y = "-1500", data-scale = "0.8", data-rotate = "90")
+	header
+		h1 Let's code in
+			i.icon-file-css
+	div#live-code-2
+section.slide#coding-the-generator(data-x = "12500", data-z = "-3300", data-y = "0", data-scale = "1.2", data-rotate = "180")
+	header
+		h1 Code that Generator
+	div#live-code-3
+section.slide#questions(data-x = "17500", data-z = "-3300", data-y = "2000", data-scale = "1", data-rotate = "240")
+	header
+		h1 Questions
+			i.icon-question-sign.full-icon
+section.slide#thanks(data-x = "12500", data-z = "-3300", data-y = "4000", data-scale = "1", data-rotate = "360")
+	header
+		h1 Thanks
+			i.icon-heart.full-icon

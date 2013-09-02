@@ -1,0 +1,44 @@
+//@import url($fontURL);
+
+/* Type */
+#{headings(all)} {
+	font-weight: $headingFontWeight;
+}
+
+header {
+	#{headings(all)} {
+		@extend %centred;
+	}
+}
+@for $i from 1 through 6 {
+	h#{$i} {
+		font-size: (($em * $multiplierLarge) - (($i * (($em * $multiplierLarge) / 6 )))) + ($em * $multiplier);
+	}
+}
+
+.subtitle {
+	font-size: 1.8em;
+}
+a {
+	@extend %transition-all;
+	color: $textColour * 3;
+	&:visited {
+		color: darken($textColour, 30);
+	}
+}
+
+p, li {
+	font-size: 1.6em;
+}
+ul, ol, dl {
+	padding-left: ($paddingLarge * $multiplier);
+	@extend %normal-margin-top-bottom;
+}
+
+.full-icon {
+	@extend %block;
+	font-size: 6em;
+	@extend %centred;
+	color: #929292;
+	text-shadow: 0 1px #000, 0 0 1.4em #FFF, 0 0 0.7em rgb(255, 255, 255);
+}

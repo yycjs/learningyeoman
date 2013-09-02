@@ -171,3 +171,5 @@ node_modules
 ## IntelliJIDEA
 #############
 .idea
+.sass-cache/
+public/js/components/
