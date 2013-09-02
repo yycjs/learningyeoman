@@ -8,8 +8,6 @@
 		"jmpress": "*"
 	},
 	"ignore": [
-		"**/.*",
-		"node_modules",
-		"public/js/components"
+		"**/.*"
 	]
 }

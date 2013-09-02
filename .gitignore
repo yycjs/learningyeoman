@@ -172,5 +172,3 @@ node_modules
 #############
 .idea
 .sass-cache/
-public/js/components/
-js/components/
