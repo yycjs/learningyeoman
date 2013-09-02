@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class = "no-js lt-ie9 lt-ie8 lt-ie7"></html>
+<![endif]-->
+<!--[if IE 7]>
+<html class = "no-js lt-ie9 lt-ie8"></html>
+<![endif]-->
+<!--[if lte IE 7]>
+<script src = "/js/lte-ie7.js"></script>
+<![endif]-->
+<!--[if IE 8]>
+<html class = "no-js lt-ie9"></html>
+<![endif]-->
+<!--[if lte IE 8]>
+<html class = "no-js lt-ie9 lt-ie8 lt-ie7"></html>
+<![endif]-->
+<!--[if gt IE 8]>
+<html class = "no-js"></html>
+<![endif]-->
+<head>
+	<meta charset = "utf-8">
+	<meta http-equiv = "X-UA-Compatible" content = "IE=edge,chrome=1">
+	<title>YYCJs: Learning Yeoman</title>
+	<meta name = "description" content = "Slides for Learning Yeoman Presentation by Sean Goresht">
+	<meta name = "viewport" content = "width=device-width">
+	<script src = "js/components/modernizr/modernizr.js"></script>
+	<link href = "http://fonts.googleapis.com/css?family=Lato:300,400|Roboto:400,300" rel = "stylesheet">
+	<link rel = "stylesheet" href = "css/style.css">
+	<link rel = "stylesheet" href = "//cdn.jsdelivr.net/codemirror/3.14.0/codemirror.css">
+</head>
+<body>
+<div class = "container">
+<div id = "content">
+<nav class = "controls toolbar">
+	<button title = "Previous Slide" class = "btn show-prev"><i class = "icon-arrow-left"></i></button>
+	<button title = "Next Slide" class = "btn show-next"><i class = "icon-arrow-right"></i></button>
+</nav>
+<article id = "jmpress">
+<section id = "welcome" class = "slide toggle-controls">
+	<header class = "intro">
+		<h1 class = "title">Introduction to <em>Yeoman</em></h1>
+
+		<h2 class = "subtitle description type">Improving your front-end workflow with scaffolding tools</h2>
+	</header>
+	<h4>Press the button to continue
+		<button id = "start" class = "btn btn-primary start-show">Go <i class = "icon-arrow-right"></i></button>
+	</h4>
+	<footer>
+		<aside>
+			<small>Web by <strong><a href = "http://seangoresht.com" target = "_blank">Sean Goresht  </a></strong><a href = "https://github.com/srsgores/learning-yeoman" target = "_blank">Fork this on GitHub <i class = "icon-github-2"></i></a></small>
+		</aside>
+	</footer>
+</section>
+<section id = "intro" data-y = "-4500" data-x = "3500" data-z = "5000" data-duration = "11000" class = "slide toggle-controls">
+<header>
+	<h1>Hi there<i class = "icon-happy full-icon"></i></h1>
+</header>
+<section id = "about-me" data-x = "2000" data-z = "1000" class = "slide">
+	<header>
+		<h1>About Me</h1>
+	</header>
+	<ul>
+		<li>I go to U of C</li>
+		<li>I write code for a design agency -<a href = "http://mantaraycreative.com" target = "_blank">Mantaray
+			Creative</a></li>
+		<li>I am front-end</li>
+		<li>Been using Express and Node for about 1 year</li>
+		<li>Some of you may recognize me</li>
+		<li>I like the newest stuff...</li>
+	</ul>
+</section>
+<section id = "the-plan" data-x = "2000" data-z = "500" data-y = "1000" class = "slide">
+	<header>
+		<h1>The Plan</h1>
+	</header>
+	<ol>
+		<li>Overview of what Yeoman does</li>
+		<li>Yeoman use cases</li>
+		<li>Yeoman Alternatives</li>
+		<li>A live example...
+			<small>of what we'll make</small>
+		</li>
+		<li>Live coding --<strong>everyone participates!</strong></li>
+		<li>Putting it all together. Choices, choices, choices.</li>
+		<li>Last words. Subgenerators.</li>
+		<li>Questions</li>
+	</ol>
+</section>
+<section id = "the-problem" data-x = "2000" data-z = "-500" data-y = "2000" class = "slide">
+	<header>
+		<h1>The Problem<i class = "icon-sad"></i></h1>
+
+		<p>Copy paste</p>
+
+		<p>Copy paste</p>
+
+		<p>Copy, paste</p>
+	</header>
+	<footer>
+		<p>Does this sound familiar to you?</p>
+
+		<p>
+			<small>Did you do this the last time you started a new project?</small>
+		</p>
+	</footer>
+</section>
+<section id = "the-solution-yeoman" data-x = "3500" data-z = "-500" data-y = "2000" class = "slide">
+	<header>
+		<h1>Introducing Yeoman</h1>
+	</header>
+	<p>Yeoman is a tool for<strong>generating</strong>new projects from scratch. It saves us time from copying old
+		project files to new projects...</p>
+	<blockquote>Yeoman is an easy way to scaffold out new applications</blockquote>
+	<section id = "introducing-yeoman" data-x = "3500" data-z = "-1000" data-y = "2000" data-scale = "1.5" data-rotate = "180" class = "slide">
+		<p>Yeoman is a command-line tool</p>
+
+		<p>It runs in NodeJS, and it prompts you via command line (terminal for Mac folks)</p>
+		<figure><img src = "img/yeoman-command-line-result.png" alt = "Yeoman Command-Line">
+			<figcaption>Yeoman on the command line</figcaption>
+		</figure>
+	</section>
+</section>
+<section id = "some-pretext" data-x = "4500" data-z = "-800" data-y = "200" class = "slide">
+	<header>
+		<h1>Some Pretext</h1>
+	</header>
+	<p>I wrote a very detailed tutorial <a href = "http://seangoresht.com/index.php/tutorials/item/getting-started-with-yeoman" target = "_blank" title = "Getting Started with Yeoman Tutorial">on my website.</a></p>
+	<a href = "http://seangoresht.com/index.php/tutorials/item/getting-started-with-yeoman" target = "_blank" title = "Getting Started with Yeoman Tutorial" class = "btn">Read Tutorial <i class = "icon-external-link"></i></a>
+</section>
+<section id = "alternatives" data-x = "4500" data-z = "-500" data-y = "2000" data-rotate = "35" class = "slide">
+	<header>
+		<h1>But is Copy-Paste Really that Bad?</h1>
+	</header>
+	<p>No, it's not...
+		<small>not really.</small>
+	</p>
+	<p>Copy paste is nice if you have noobs on your team</p>
+	<section id = "there-are-alot-of-alternatives" data-x = "4500" data-z = "-1200" data-y = "2000" data-rotate = "80" data-scale = "1.4" class = "slide">
+		<header>
+			<h1>Alternatives</h1>
+		</header>
+		<p>There are alternatives...<strong>absolutely</strong></p>
+		<ul>
+			<li>Command-line utilities
+				<ul>
+					<li>Powershell scripting</li>
+					<li>Scripting in X language of your choice: console, C#, Visual Basic, etc.</li>
+					<li>Applescript? 
+						<small>(Oh yeah, people actually use that)</small>
+					</li>
+					<li>Objective C? 
+						<small>(don't even get me started)</small>
+					</li>
+					<li>Codecanyon generators. 
+						<small>There is even a category!</small>
+					</li>
+				</ul>
+			</li>
+			<li>JS alternatives
+				<ul>
+					<li>brunch</li>
+					<li>Angular generators written in Python</li>
+					<li>... pretty much, you name it</li>
+				</ul>
+			</li>
+		</ul>
+	</section>
+</section>
+<section id = "get-started" data-x = "4500" data-z = "-3500" data-y = "2000" data-rotate = "90" class = "slide">
+	<header>
+		<h1>Let's Get Started<i class = "icon-hand-right full-icon"></i></h1>
+	</header>
+	<i class = "icon-hamburger full-icon"></i>
+	<section id = "install-node" data-x = "4500" data-z = "-2500" data-y = "2000" data-rotate = "90" class = "slide">
+		<header>
+			<h1>NodeJS Plz</h1>
+		</header>
+		<p>Install Node.</p>
+
+		<p>
+			<small>If you don't know what Node is, you need to read up on it</small>
+		</p>
+		<figure><img src = "img/node-check.png">
+			<figcaption>Installing Node on PC</figcaption>
+		</figure>
+		<section id = "OMGZ-RESTART" data-x = "4500" data-z = "-6000" data-y = "2000" data-rotate = "300" class = "slide">
+			<header>
+				<h1>RESTART</h1>
+			</header>
+			<i style = "font-size: 15em;" class = "icon-repeat full-icon"></i>
+		</section>
+	</section>
+	<section id = "install-yeoman" data-x = "5500" data-z = "-5000" data-y = "2000" data-rotate = "90" class = "slide">
+		<header>
+			<h1>Install Yeoman</h1>
+		</header>
+		<pre><code>npm install -g yo</code></pre>
+		<p>NPM does everything for<strong>yo</strong></p>
+		<section id = "check-for-success" data-x = "4500" data-z = "-6000" data-y = "2000" data-rotate = "90" class = "slide">
+			<header>
+				<h1>Try It Out</h1>
+			</header>
+			<pre><code>yo</code></pre>
+			<figure><img src = "img/check-yeoman.png">
+				<figcaption>Check Yeoman Installation</figcaption>
+			</figure>
+		</section>
+	</section>
+	<section id = "install-generator" data-x = "5500" data-z = "-4000" data-y = "2000" data-rotate = "35" class = "slide">
+		<header>
+			<h1>Install a Generator!</h1>
+		</header>
+		<p>The inception starts now</p>
+		<section id = "install-generator-generator" data-x = "6500" data-z = "-4000" data-y = "2000" data-rotate = "35" class = "slide">
+			<header>
+				<h1>Install<code>generator-generator</code></h1>
+			</header>
+			<pre><code>npm install -g generator-generator</code></pre>
+		</section>
+		<section id = "generators-explained" data-x = "7500" data-z = "-4000" data-y = "2000" data-rotate = "35" class = "slide">
+			<header>
+				<h1>About Generators...</h1>
+			</header>
+			<p>Generators are yeoman (nodejs) apps that scaffold out (generate) new apps</p>
+
+			<p>In our case, that's an HTMl5 app</p>
+
+			<p>When you make a new generator, you are using a generator</p>
+			<footer>
+				<p>Ok...
+					<small>Now for the fun</small>
+				</p>
+			</footer>
+		</section>
+	</section>
+</section>
+<section id = "our-project-goal" data-x = "8500" data-z = "-4000" data-y = "2000" data-rotate = "35" class = "slide">
+	<header>
+		<h1>Our Goal
+			<small>(HTML5 App)</small>
+		</h1>
+	</header>
+	<p>We will create a new yeoman app to automatically generate the following for us, saving us time in the future:</p>
+	<ul>
+		<li><code>script</code> tags, so we can automatically specify which JS files to use in a given project</li>
+		<li><code>style</code> tags, so we can import whatever front-end framework we want</li>
+		<li>Author and project information, including licensing details, which will be appended to the beginning of each file, in a block-style comment
+		</li>
+	</ul>
+</section>
+<section id = "generator-start" data-x = "10500" data-z = "-4000" data-y = "2000" data-rotate = "35" class = "slide">
+	<header>
+		<h1>The Next Generation</h1>
+	</header>
+	<pre><code>yo generator-generator</code></pre>
+	<p>Enter your creds</p>
+	<figure><img src = "img/generator-generator-install.png">
+		<figcaption>Scaffolding out a new generator</figcaption>
+	</figure>
+</section>
+<section id = "fun-coding-time" data-x = "10500" data-z = "-2000" data-y = "2000" data-scale = "1.6" class = "slide">
+	<header>
+		<h1>Fun Coding <i class = "icon-html5 full-icon"></i></h1>
+	</header>
+</section>
+<section id = "coding-the-html5-app" data-x = "12500" data-z = "-2500" data-y = "2000" data-scale = "1.1" class = "slide">
+	<header>
+		<h1>Let's code in<i class = "icon-html5"></i></h1>
+	</header>
+	<div id = "live-code-1"></div>
+</section>
+<section id = "css-stuff" data-x = "13500" data-z = "-3000" data-y = "-1500" data-scale = "0.8" data-rotate = "90" class = "slide">
+	<header>
+		<h1>Let's code in<i class = "icon-file-css"></i></h1>
+	</header>
+	<div id = "live-code-2"></div>
+</section>
+<section id = "coding-the-generator" data-x = "12500" data-z = "-3300" data-y = "0" data-scale = "1.2" data-rotate = "180" class = "slide">
+	<header>
+		<h1>Code that Generator</h1>
+	</header>
+	<div id = "live-code-3"></div>
+</section>
+<section id = "questions" data-x = "17500" data-z = "-3300" data-y = "2000" data-scale = "1" data-rotate = "240" class = "slide">
+	<header>
+		<h1>Questions<i class = "icon-question-sign full-icon"></i></h1>
+	</header>
+</section>
+<section id = "thanks" data-x = "12500" data-z = "-3300" data-y = "4000" data-scale = "1" data-rotate = "360" class = "slide">
+	<header>
+		<h1>Thanks<i class = "icon-heart full-icon"></i></h1>
+	</header>
+</section>
+</section>
+</article>
+</div>
+</div>
+<script src = "js/components/jquery/jquery.min.js"></script>
+<script src = "js/components/jquery/jquery-migrate.min.js"></script>
+<script src = "js/components/jmpress/jmpress.js"></script>
+<script src = "js/typewriter.js"></script>
+<script src = "https://cdn.firebase.com/v0/firebase.js"></script>
+<script src = "//cdn.jsdelivr.net/codemirror/3.14.0/codemirror.js"></script>
+<script src = "js/firepad-min.js"></script>
+<script src = "js/main.js"></script>
+</body>
